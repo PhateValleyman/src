@@ -1,0 +1,178 @@
+diff -rupN openjdk-8.40.25/hotspot/src/os/linux/vm/os_linux.cpp openjdk-8.40.25-patched/hotspot/src/os/linux/vm/os_linux.cpp
+--- openjdk-8.40.25/hotspot/src/os/linux/vm/os_linux.cpp	2015-02-04 22:14:39.000000000 +0200
++++ openjdk-8.40.25-patched/hotspot/src/os/linux/vm/os_linux.cpp	2015-04-16 08:28:02.885008930 +0300
+@@ -94,7 +94,6 @@
+ # include <string.h>
+ # include <syscall.h>
+ # include <sys/sysinfo.h>
+-# include <gnu/libc-version.h>
+ # include <sys/ipc.h>
+ # include <sys/shm.h>
+ # include <link.h>
+@@ -586,9 +585,7 @@ void os::Linux::libpthread_init() {
+      os::Linux::set_glibc_version(str);
+   } else {
+      // _CS_GNU_LIBC_VERSION is not supported, try gnu_get_libc_version()
+-     static char _gnu_libc_version[32];
+-     jio_snprintf(_gnu_libc_version, sizeof(_gnu_libc_version),
+-              "glibc %s %s", gnu_get_libc_version(), gnu_get_libc_release());
++     static char _gnu_libc_version[32] = "2.9";
+      os::Linux::set_glibc_version(_gnu_libc_version);
+   }
+ 
+@@ -2835,10 +2832,7 @@ extern "C" JNIEXPORT int fork1() { retur
+ // If we are running with earlier version, which did not have symbol versions,
+ // we should use the base version.
+ void* os::Linux::libnuma_dlsym(void* handle, const char *name) {
+-  void *f = dlvsym(handle, name, "libnuma_1.1");
+-  if (f == NULL) {
+-    f = dlsym(handle, name);
+-  }
++  void *f = dlsym(handle, name);
+   return f;
+ }
+ 
+@@ -5490,7 +5484,22 @@ bool os::is_thread_cpu_time_supported()
+ // Linux doesn't yet have a (official) notion of processor sets,
+ // so just return the system wide load average.
+ int os::loadavg(double loadavg[], int nelem) {
+-  return ::getloadavg(loadavg, nelem);
++
++	FILE *LOADAVG;
++	double avg[3] = { 0.0, 0.0, 0.0 };
++	int i, res = -1;;
++
++	if ((LOADAVG = fopen("/proc/loadavg", "r"))) {
++		fscanf(LOADAVG, "%lf %lf %lf", &avg[0], &avg[1], &avg[2]);
++		res = 0;
++		fclose(LOADAVG);
++	}
++
++	for (i = 0; (i < nelem) && (i < 3); i++) {
++		loadavg[i] = avg[i];
++	}
++
++	return res;
+ }
+ 
+ void os::pause() {
+diff -rupN openjdk-8.40.25/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp openjdk-8.40.25-patched/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp
+--- openjdk-8.40.25/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp	2015-02-04 22:14:39.000000000 +0200
++++ openjdk-8.40.25-patched/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp	2015-04-16 08:28:02.965007188 +0300
+@@ -234,7 +234,7 @@ extern "C" void breakpoint();
+ // checking for nanness
+ #ifdef SOLARIS
+ #ifdef SPARC
+-inline int g_isnan(float  f) { return isnanf(f); }
++inline int g_isnan(float  f) { return __isnanf(f); }
+ #else
+ // isnanf() broken on Intel Solaris use isnand()
+ inline int g_isnan(float  f) { return isnand(f); }
+@@ -243,7 +243,7 @@ inline int g_isnan(double f) { return is
+ #elif defined(__APPLE__)
+ inline int g_isnan(double f) { return isnan(f); }
+ #elif defined(LINUX) || defined(_ALLBSD_SOURCE)
+-inline int g_isnan(float  f) { return isnanf(f); }
++inline int g_isnan(float  f) { return __isnanf(f); }
+ inline int g_isnan(double f) { return isnan(f); }
+ #else
+ #error "missing platform-specific definition here"
+@@ -257,8 +257,8 @@ inline int g_isnan(double f) { return is
+ 
+ // Checking for finiteness
+ 
+-inline int g_isfinite(jfloat  f)                 { return finite(f); }
+-inline int g_isfinite(jdouble f)                 { return finite(f); }
++inline int g_isfinite(jfloat  f)                 { return isfinite(f); }
++inline int g_isfinite(jdouble f)                 { return isfinite(f); }
+ 
+ 
+ // Wide characters
+diff -rupN openjdk-8.40.25/jdk/make/lib/Awt2dLibraries.gmk openjdk-8.40.25-patched/jdk/make/lib/Awt2dLibraries.gmk
+--- openjdk-8.40.25/jdk/make/lib/Awt2dLibraries.gmk	2015-02-04 22:14:43.000000000 +0200
++++ openjdk-8.40.25-patched/jdk/make/lib/Awt2dLibraries.gmk	2015-04-16 08:28:02.935007575 +0300
+@@ -1270,7 +1270,7 @@ ifndef BUILD_HEADLESS_ONLY
+       OPTIMIZATION := LOW, \
+       CFLAGS := $(LIBSPLASHSCREEN_CFLAGS) $(CFLAGS_JDKLIB) $(GIFLIB_CFLAGS), \
+       MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libsplashscreen/mapfile-vers, \
+-      LDFLAGS := $(LDFLAGS_JDKLIB) \
++      LDFLAGS := $(LDFLAGS_JDKLIB) -liconv \
+           $(call SET_SHARED_LIBRARY_ORIGIN), \
+       LDFLAGS_SUFFIX := $(LIBSPLASHSCREEN_LDFLAGS_SUFFIX) $(LIBZ) $(GIFLIB_LDFLAGS), \
+       LDFLAGS_SUFFIX_solaris := -lc, \
+diff -rupN openjdk-8.40.25/jdk/make/lib/CoreLibraries.gmk openjdk-8.40.25-patched/jdk/make/lib/CoreLibraries.gmk
+--- openjdk-8.40.25/jdk/make/lib/CoreLibraries.gmk	2015-02-04 22:14:43.000000000 +0200
++++ openjdk-8.40.25-patched/jdk/make/lib/CoreLibraries.gmk	2015-04-16 08:28:02.935007575 +0300
+@@ -196,9 +196,9 @@ $(eval $(call SetupNativeCompilation,BUI
+     MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libjava/mapfile-vers, \
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+         $(call SET_SHARED_LIBRARY_ORIGIN), \
+-    LDFLAGS_SUFFIX_posix := -ljvm -lverify, \
++    LDFLAGS_SUFFIX_posix := -ljvm -lverify -lm, \
+     LDFLAGS_SUFFIX_solaris := -lsocket -lnsl -lscf $(LIBDL) $(BUILD_LIBFDLIBM) -lc, \
+-    LDFLAGS_SUFFIX_linux := $(LIBDL) $(BUILD_LIBFDLIBM), \
++    LDFLAGS_SUFFIX_linux := $(LIBDL) $(BUILD_LIBFDLIBM) -lm, \
+     LDFLAGS_SUFFIX_aix := $(LIBDL) $(BUILD_LIBFDLIBM) -lm,\
+     LDFLAGS_SUFFIX_macosx := -L$(JDK_OUTPUTDIR)/objs/ -lfdlibm \
+         -framework CoreFoundation \
+@@ -514,7 +514,7 @@ $(eval $(call SetupNativeCompilation,BUI
+         -I$(JDK_TOPDIR)/src/$(OPENJDK_TARGET_OS_API_DIR)/npt, \
+     MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libnpt/mapfile-vers, \
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+-        $(call SET_SHARED_LIBRARY_ORIGIN), \
++        $(call SET_SHARED_LIBRARY_ORIGIN) -liconv, \
+     LDFLAGS_macosx := -liconv, \
+     LDFLAGS_SUFFIX_windows := -export:nptInitialize -export:nptTerminate, \
+     LDFLAGS_SUFFIX_solaris := -lc, \
+diff -rupN openjdk-8.40.25/jdk/make/lib/ServiceabilityLibraries.gmk openjdk-8.40.25-patched/jdk/make/lib/ServiceabilityLibraries.gmk
+--- openjdk-8.40.25/jdk/make/lib/ServiceabilityLibraries.gmk	2015-02-04 22:14:43.000000000 +0200
++++ openjdk-8.40.25-patched/jdk/make/lib/ServiceabilityLibraries.gmk	2015-04-16 08:28:02.935007575 +0300
+@@ -259,7 +259,7 @@ $(eval $(call SetupNativeCompilation,BUI
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+         $(call SET_SHARED_LIBRARY_ORIGIN) \
+         $(LIBINSTRUMENT_LDFLAGS), \
+-    LDFLAGS_linux := $(call SET_SHARED_LIBRARY_ORIGIN,/jli), \
++    LDFLAGS_linux := $(call SET_SHARED_LIBRARY_ORIGIN,/jli) -liconv, \
+     LDFLAGS_solaris := $(call SET_SHARED_LIBRARY_ORIGIN,/jli), \
+     LDFLAGS_macosx := -Xlinker -all_load $(JDK_OUTPUTDIR)/objs/libjli_static.a \
+         -framework Cocoa -framework Security -framework ApplicationServices, \
+diff -rupN openjdk-8.40.25/jdk/src/solaris/native/sun/xawt/XToolkit.c openjdk-8.40.25-patched/jdk/src/solaris/native/sun/xawt/XToolkit.c
+--- openjdk-8.40.25/jdk/src/solaris/native/sun/xawt/XToolkit.c	2015-02-04 22:14:43.000000000 +0200
++++ openjdk-8.40.25-patched/jdk/src/solaris/native/sun/xawt/XToolkit.c	2015-04-16 08:28:02.905009298 +0300
+@@ -27,9 +27,6 @@
+ #include <X11/Xutil.h>
+ #include <X11/Xos.h>
+ #include <X11/Xatom.h>
+-#ifdef __linux__
+-#include <execinfo.h>
+-#endif
+ 
+ #include <jvm.h>
+ #include <jni.h>
+@@ -799,26 +796,6 @@ JNIEXPORT jstring JNICALL Java_sun_awt_X
+     return ret;
+ }
+ 
+-#ifdef __linux__
+-void print_stack(void)
+-{
+-  void *array[10];
+-  size_t size;
+-  char **strings;
+-  size_t i;
+-
+-  size = backtrace (array, 10);
+-  strings = backtrace_symbols (array, size);
+-
+-  fprintf (stderr, "Obtained %zd stack frames.\n", size);
+-
+-  for (i = 0; i < size; i++)
+-     fprintf (stderr, "%s\n", strings[i]);
+-
+-  free (strings);
+-}
+-#endif
+-
+ Window get_xawt_root_shell(JNIEnv *env) {
+   static jclass classXRootWindow = NULL;
+   static jmethodID methodGetXRootWindow = NULL;

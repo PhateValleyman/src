@@ -1,0 +1,12 @@
+--- uClibc-ng-1.0.23/ldso/ldso/dl-elf.c	2017-04-04 13:07:08.851805222 +0300
++++ uClibc-ng-1.0.23_patched/ldso/ldso/dl-elf.c	2017-04-04 13:57:08.633307560 +0300
+@@ -313,8 +313,7 @@
+ 	   standard lib directories. */
+ 	_dl_if_debug_dprint("\tsearching multilib lib path list\n");
+ 	tpnt1 = search_for_named_library(libname, rflags,
+-					UCLIBC_RUNTIME_PREFIX LDSO_MULTILIB_DIR ":"
+-					UCLIBC_RUNTIME_PREFIX "usr" LDSO_MULTILIB_DIR,
++					UCLIBC_RUNTIME_PREFIX LDSO_MULTILIB_DIR,
+ 					rpnt, NULL);
+ 	if (tpnt1 != NULL)
+ 		return tpnt1;

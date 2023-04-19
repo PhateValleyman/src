@@ -1,0 +1,11 @@
+--- a/ldso/ldso/Makefile.in	2016-10-23 10:19:04.000000000 +0300
++++ b/ldso/ldso/Makefile.in	2016-11-12 14:38:26.000000000 +0200
+@@ -80,8 +80,6 @@ $(ldso): $(ldso:.$(ABI_VERSION)=)
+ $(ldso:.$(ABI_VERSION)=): | $(top_builddir)lib
+ $(ldso:.$(ABI_VERSION)=): $($(UCLIBC_LDSO_NAME)_OUT)/$(UCLIBC_LDSO_NAME)_so.a
+ 	$(call link.so,$(ldso_FULL_NAME),$(ABI_VERSION))
+-	# link for backward compatibility
+-	(cd $(top_builddir)lib; ln -sf $(UCLIBC_LDSO_NAME).so.$(ABI_VERSION) $(UCLIBC_LDSO_NAME).so.0 )
+ ifeq ($(CONFIG_MIPS_NAN_2008),y)
+ 	(cd $(top_builddir)lib; ln -sf $(UCLIBC_LDSO_NAME).so.$(ABI_VERSION) $(UCLIBC_LDSO_NAME)-mipsn8.so.0)
+ endif

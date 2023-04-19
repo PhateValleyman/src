@@ -1,0 +1,52 @@
+comment_char    %
+escape_char     /
+% Arabic language locale for Jordan.
+% Contributed by Kentaroh Noji <knoji@jp.ibm.com> and
+% Tetsuji Orita <orita@jp.ibm.com>.
+
+LC_IDENTIFICATION
+title      "Arabic language locale for Jordan"
+source     "IBM Globalization Center of Competency, Yamato Software Laboratory"
+address    "1623-14, Shimotsuruma, Yamato-shi, Kanagawa-ken, 242-8502, Japan"
+contact    ""
+email      "bug-glibc-locales@gnu.org"
+tel        ""
+fax        ""
+language   "Arabic"
+territory  "Jordan"
+revision   "1.0"
+date       "2000-07-20"
+%
+category  "ar_JO:2000";LC_IDENTIFICATION
+category  "ar_JO:2000";LC_CTYPE
+category  "ar_JO:2000";LC_COLLATE
+category  "ar_JO:2000";LC_TIME
+category  "ar_JO:2000";LC_NUMERIC
+category  "ar_JO:2000";LC_MONETARY
+category  "ar_JO:2000";LC_MESSAGES
+category  "ar_JO:2000";LC_PAPER
+category  "ar_JO:2000";LC_NAME
+category  "ar_JO:2000";LC_ADDRESS
+category  "ar_JO:2000";LC_TELEPHONE
+
+END LC_IDENTIFICATION
+
+
+LC_CTYPE
+copy "ar_EG"
+END LC_CTYPE
+
+LC_COLLATE
+
+% Copy the template from ISO/IEC 14651
+copy "iso14651_t1"
+
+END LC_COLLATE
+
+LC_MONETARY
+% This is the POSIX Locale definition the LC_MONETARY category.
+% These are generated based on XML base Locale definition file
+% for IBM Class for Unicode/Java
+%
+int_curr_symbol       "<U004A><U004F><U0044><U0020>"
+currency_symbol       "<U062F><U002E><U0623>

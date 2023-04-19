@@ -1,0 +1,193 @@
+libsanitizer/ChangeLog
+2014-04-02  Bernhard Reutner-Fischer  <aldot@gcc.gnu.org>
+
+	* configure.ac: Check for sizeof(struct statfs64).
+	* configure, config.h.in: Regenerate.
+	* sanitizer_common/sanitizer_platform_interceptors.h
+	(SANITIZER_INTERCEPT_STATFS64): Make conditional on
+	SIZEOF_STRUCT_STATFS64 being not 0.
+	* sanitizer_common/sanitizer_platform_limits_linux.cc
+	(namespace __sanitizer): Make unsigned
+	struct_statfs64_sz conditional on SANITIZER_INTERCEPT_STATFS64.
+
+Signed-off-by: Bernhard Reutner-Fischer <rep.dot.nop@gmail.com>
+---
+ libsanitizer/config.h.in                           |  9 +++
+ libsanitizer/configure                             | 69 ++++++++++++++++++++++
+ libsanitizer/configure.ac                          | 15 +++++
+ .../sanitizer_platform_interceptors.h              |  4 +-
+ .../sanitizer_platform_limits_linux.cc             |  2 +
+ 5 files changed, 98 insertions(+), 1 deletion(-)
+
+diff --git a/libsanitizer/config.h.in b/libsanitizer/config.h.in
+index e4b2786..4bd6a7f 100644
+--- a/libsanitizer/config.h.in
++++ b/libsanitizer/config.h.in
+@@ -61,12 +61,18 @@
+ /* Define to 1 if you have the <sys/mman.h> header file. */
+ #undef HAVE_SYS_MMAN_H
+ 
++/* Define to 1 if you have the <sys/statfs.h> header file. */
++#undef HAVE_SYS_STATFS_H
++
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
+ 
+ /* Define to 1 if you have the <sys/types.h> header file. */
+ #undef HAVE_SYS_TYPES_H
+ 
++/* Define to 1 if you have the <sys/vfs.h> header file. */
++#undef HAVE_SYS_VFS_H
++
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
+@@ -107,6 +113,9 @@
+ /* The size of `short', as computed by sizeof. */
+ #undef SIZEOF_SHORT
+ 
++/* The size of `struct statfs64', as computed by sizeof. */
++#undef SIZEOF_STRUCT_STATFS64
++
+ /* The size of `void *', as computed by sizeof. */
+ #undef SIZEOF_VOID_P
+ 
+diff --git a/libsanitizer/configure b/libsanitizer/configure
+index 5e4840f..c636212 100755
+--- a/libsanitizer/configure
++++ b/libsanitizer/configure
+@@ -15463,6 +15463,75 @@ _ACEOF
+ 
+ 
+ 
++for ac_header in sys/statfs.h
++do :
++  ac_fn_c_check_header_mongrel "$LINENO" "sys/statfs.h" "ac_cv_header_sys_statfs_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_statfs_h" = x""yes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_SYS_STATFS_H 1
++_ACEOF
++
++fi
++
++done
++
++if test "$ac_cv_header_sys_statfs_h" = "no"; then
++  for ac_header in sys/vfs.h
++do :
++  ac_fn_c_check_header_mongrel "$LINENO" "sys/vfs.h" "ac_cv_header_sys_vfs_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_vfs_h" = x""yes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_SYS_VFS_H 1
++_ACEOF
++
++fi
++
++done
++
++fi
++# The cast to long int works around a bug in the HP C Compiler
++# version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
++# declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
++# This bug is HP SR number 8606223364.
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking size of struct statfs64" >&5
++$as_echo_n "checking size of struct statfs64... " >&6; }
++if test "${ac_cv_sizeof_struct_statfs64+set}" = set; then :
++  $as_echo_n "(cached) " >&6
++else
++  if ac_fn_c_compute_int "$LINENO" "(long int) (sizeof (struct statfs64))" "ac_cv_sizeof_struct_statfs64"        "
++#ifdef HAVE_SYS_STATFS_H
++# include <sys/statfs.h>
++#endif
++#ifdef HAVE_SYS_VFS_H
++# include <sys/vfs.h>
++#endif
++
++"; then :
++
++else
++  if test "$ac_cv_type_struct_statfs64" = yes; then
++     { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
++$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
++{ as_fn_set_status 77
++as_fn_error "cannot compute sizeof (struct statfs64)
++See \`config.log' for more details." "$LINENO" 5; }; }
++   else
++     ac_cv_sizeof_struct_statfs64=0
++   fi
++fi
++
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_sizeof_struct_statfs64" >&5
++$as_echo "$ac_cv_sizeof_struct_statfs64" >&6; }
++
++
++
++cat >>confdefs.h <<_ACEOF
++#define SIZEOF_STRUCT_STATFS64 $ac_cv_sizeof_struct_statfs64
++_ACEOF
++
++
++
+ if test "${multilib}" = "yes"; then
+   multilib_arg="--enable-multilib"
+ else
+diff --git a/libsanitizer/configure.ac b/libsanitizer/configure.ac
+index e672131..746c216 100644
+--- a/libsanitizer/configure.ac
++++ b/libsanitizer/configure.ac
+@@ -78,6 +78,21 @@ AC_SUBST(enable_static)
+ 
+ AC_CHECK_SIZEOF([void *])
+ 
++dnl Careful, this breaks on glibc for e.g. dirent.d_ino being 64bit
++dnl AC_SYS_LARGEFILE
++AC_CHECK_HEADERS(sys/statfs.h)
++if test "$ac_cv_header_sys_statfs_h" = "no"; then
++  AC_CHECK_HEADERS(sys/vfs.h)
++fi
++AC_CHECK_SIZEOF([struct statfs64],[],[
++#ifdef HAVE_SYS_STATFS_H
++# include <sys/statfs.h>
++#endif
++#ifdef HAVE_SYS_VFS_H
++# include <sys/vfs.h>
++#endif
++])
++
+ if test "${multilib}" = "yes"; then
+   multilib_arg="--enable-multilib"
+ else
+diff --git a/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h b/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h
+index f37d84b..b9ebd5c 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h
+@@ -137,7 +137,9 @@
+ # define SANITIZER_INTERCEPT_GETMNTENT_R SI_LINUX_NOT_ANDROID
+ # define SANITIZER_INTERCEPT_STATFS SI_NOT_WINDOWS
+ # define SANITIZER_INTERCEPT_STATFS64 \
+-    (SI_MAC && !SI_IOS) || SI_LINUX_NOT_ANDROID
++    SIZEOF_STRUCT_STATFS64 && ( \
++      (SI_MAC && !SI_IOS) || SI_LINUX_NOT_ANDROID \
++    )
+ # define SANITIZER_INTERCEPT_STATVFS SI_LINUX_NOT_ANDROID
+ # define SANITIZER_INTERCEPT_STATVFS64 SI_LINUX_NOT_ANDROID
+ # define SANITIZER_INTERCEPT_INITGROUPS SI_NOT_WINDOWS
+diff --git a/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cc b/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cc
+index bc37df0..637ac1d 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cc
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cc
+@@ -59,7 +59,9 @@
+ #endif
+ 
+ namespace __sanitizer {
++#if SANITIZER_INTERCEPT_STATFS64
+   unsigned struct_statfs64_sz = sizeof(struct statfs64);
++#endif
+ }  // namespace __sanitizer
+ 
+ #if !defined(__powerpc64__) && !defined(__x86_64__)
+-- 
+1.9.1
+
+

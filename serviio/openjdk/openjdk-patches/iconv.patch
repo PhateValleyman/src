@@ -1,0 +1,48 @@
+diff -rupN jdk/make/lib/Awt2dLibraries.gmk /mnt/HD_a2/buildfirst/openjdk-8.40.25/jdk/make/lib/Awt2dLibraries.gmk
+--- jdk/make/lib/Awt2dLibraries.gmk	2015-02-04 22:14:43.000000000 +0200
++++ /mnt/HD_a2/buildfirst/openjdk-8.40.25/jdk/make/lib/Awt2dLibraries.gmk	2015-04-13 12:23:37.100716269 +0300
+@@ -1270,7 +1270,7 @@ ifndef BUILD_HEADLESS_ONLY
+       OPTIMIZATION := LOW, \
+       CFLAGS := $(LIBSPLASHSCREEN_CFLAGS) $(CFLAGS_JDKLIB) $(GIFLIB_CFLAGS), \
+       MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libsplashscreen/mapfile-vers, \
+-      LDFLAGS := $(LDFLAGS_JDKLIB) \
++      LDFLAGS := $(LDFLAGS_JDKLIB) -liconv \
+           $(call SET_SHARED_LIBRARY_ORIGIN), \
+       LDFLAGS_SUFFIX := $(LIBSPLASHSCREEN_LDFLAGS_SUFFIX) $(LIBZ) $(GIFLIB_LDFLAGS), \
+       LDFLAGS_SUFFIX_solaris := -lc, \
+diff -rupN jdk/make/lib/CoreLibraries.gmk /mnt/HD_a2/buildfirst/openjdk-8.40.25/jdk/make/lib/CoreLibraries.gmk
+--- jdk/make/lib/CoreLibraries.gmk	2015-02-04 22:14:43.000000000 +0200
++++ /mnt/HD_a2/buildfirst/openjdk-8.40.25/jdk/make/lib/CoreLibraries.gmk	2015-04-10 20:32:36.542213439 +0300
+@@ -196,9 +196,9 @@ $(eval $(call SetupNativeCompilation,BUI
+     MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libjava/mapfile-vers, \
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+         $(call SET_SHARED_LIBRARY_ORIGIN), \
+-    LDFLAGS_SUFFIX_posix := -ljvm -lverify, \
++    LDFLAGS_SUFFIX_posix := -ljvm -lverify -lm, \
+     LDFLAGS_SUFFIX_solaris := -lsocket -lnsl -lscf $(LIBDL) $(BUILD_LIBFDLIBM) -lc, \
+-    LDFLAGS_SUFFIX_linux := $(LIBDL) $(BUILD_LIBFDLIBM), \
++    LDFLAGS_SUFFIX_linux := $(LIBDL) $(BUILD_LIBFDLIBM) -lm, \
+     LDFLAGS_SUFFIX_aix := $(LIBDL) $(BUILD_LIBFDLIBM) -lm,\
+     LDFLAGS_SUFFIX_macosx := -L$(JDK_OUTPUTDIR)/objs/ -lfdlibm \
+         -framework CoreFoundation \
+@@ -514,7 +514,7 @@ $(eval $(call SetupNativeCompilation,BUI
+         -I$(JDK_TOPDIR)/src/$(OPENJDK_TARGET_OS_API_DIR)/npt, \
+     MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libnpt/mapfile-vers, \
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+-        $(call SET_SHARED_LIBRARY_ORIGIN), \
++        $(call SET_SHARED_LIBRARY_ORIGIN) -liconv, \
+     LDFLAGS_macosx := -liconv, \
+     LDFLAGS_SUFFIX_windows := -export:nptInitialize -export:nptTerminate, \
+     LDFLAGS_SUFFIX_solaris := -lc, \
+diff -rupN jdk/make/lib/ServiceabilityLibraries.gmk /mnt/HD_a2/buildfirst/openjdk-8.40.25/jdk/make/lib/ServiceabilityLibraries.gmk
+--- jdk/make/lib/ServiceabilityLibraries.gmk	2015-02-04 22:14:43.000000000 +0200
++++ /mnt/HD_a2/buildfirst/openjdk-8.40.25/jdk/make/lib/ServiceabilityLibraries.gmk	2015-04-10 20:50:12.602740558 +0300
+@@ -259,7 +259,7 @@ $(eval $(call SetupNativeCompilation,BUI
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+         $(call SET_SHARED_LIBRARY_ORIGIN) \
+         $(LIBINSTRUMENT_LDFLAGS), \
+-    LDFLAGS_linux := $(call SET_SHARED_LIBRARY_ORIGIN,/jli), \
++    LDFLAGS_linux := $(call SET_SHARED_LIBRARY_ORIGIN,/jli) -liconv, \
+     LDFLAGS_solaris := $(call SET_SHARED_LIBRARY_ORIGIN,/jli), \
+     LDFLAGS_macosx := -Xlinker -all_load $(JDK_OUTPUTDIR)/objs/libjli_static.a \
+         -framework Cocoa -framework Security -framework ApplicationServices, \

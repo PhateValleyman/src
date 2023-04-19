@@ -1,0 +1,12 @@
+diff -rupN a/Rules.mak b/Rules.mak
+--- a/Rules.mak	2016-05-29 10:19:35.000000000 +0300
++++ b/Rules.mak	2016-06-17 11:49:32.000000000 +0300
+@@ -129,7 +129,7 @@ MINOR_VERSION := 0
+ SUBLEVEL      := 15
+ EXTRAVERSION  :=
+ VERSION       := $(MAJOR_VERSION).$(MINOR_VERSION).$(SUBLEVEL)
+-ABI_VERSION   := $(MAJOR_VERSION)
++ABI_VERSION   := 0
+ ifneq ($(EXTRAVERSION),)
+ VERSION       := $(VERSION)$(EXTRAVERSION)
+ endif

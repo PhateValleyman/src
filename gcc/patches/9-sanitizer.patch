@@ -1,0 +1,1136 @@
+Conditionalize usage of dlvsym(), nanosleep(), usleep();
+Conditionalize layout of struct sigaction and type of it's member
+sa_flags.
+Conditionalize glob_t members gl_closedir, gl_readdir, gl_opendir,
+gl_flags, gl_lstat, gl_stat.
+Check for availability of glob.h for use with above members.
+Check for availability of netrom/netrom.h, sys/ustat.h (for obsolete
+ustat() function), utime.h (for obsolete utime() function), wordexp.h.
+Determine size of sigset_t instead of hardcoding it.
+
+libsanitizer/ChangeLog
+
+2014-04-16  Bernhard Reutner-Fischer  <aldot@gcc.gnu.org>
+
+	* configure.ac (AC_CHECK_HEADERS): Add time.h, wordexp.h,
+	glob.h, netrom/netrom.h, sys/ustat.h.
+	(AC_CHECK_MEMBERS): Check GNU extension glob_t members.
+	(AC_CHECK_SIZEOF): Determine size of sigset_t.
+	(HAVE_STRUCT_SIGACTION_SA_MASK_LAST,
+	STRUCT_SIGACTION_SA_FLAGS_TYPE): New.
+	(AC_CHECK_FUNCS): Add usleep, nanosleep, dlvsym.
+	* configure, config.h.in: Regenerate.
+	* asan/Makefile.am, lsan/Makefile.am, tsan/Makefile.am,
+	sanitizer_common/Makefile.am (AM_CXXFLAGS): Include config.h,
+	add include search directory.
+	* asan/Makefile.in, lsan/Makefile.in, tsan/Makefile.in,
+	sanitizer_common/Makefile.in: Regenerate.
+	* interception/interception_linux.h,
+	interception/interception_linux.cc,
+	sanitizer_common/sanitizer_common_interceptors.inc,
+	sanitizer_common/sanitizer_platform_limits_posix.cc,
+	sanitizer_common/sanitizer_platform_limits_posix.h,
+	sanitizer_common/sanitizer_posix_libcdep.cc: Use config.h's new
+	defines.
+
+Signed-off-by: Bernhard Reutner-Fischer <rep.dot.nop@gmail.com>
+---
+ libsanitizer/asan/Makefile.am                      |   6 +
+ libsanitizer/asan/Makefile.in                      |  17 +-
+ libsanitizer/config.h.in                           |  51 +++++
+ libsanitizer/configure                             | 212 ++++++++++++++++++++-
+ libsanitizer/configure.ac                          |  23 +++
+ libsanitizer/interception/interception_linux.cc    |   2 +
+ libsanitizer/interception/interception_linux.h     |   8 +
+ libsanitizer/lsan/Makefile.am                      |   6 +
+ libsanitizer/lsan/Makefile.in                      |  11 +-
+ libsanitizer/sanitizer_common/Makefile.am          |   5 +
+ libsanitizer/sanitizer_common/Makefile.in          |  18 +-
+ .../sanitizer_common_interceptors.inc              | 100 +++++++++-
+ .../sanitizer_platform_limits_posix.cc             |  44 ++++-
+ .../sanitizer_platform_limits_posix.h              |  27 ++-
+ .../sanitizer_common/sanitizer_posix_libcdep.cc    |   7 +
+ libsanitizer/tsan/Makefile.am                      |   6 +
+ libsanitizer/tsan/Makefile.in                      |  11 +-
+ 17 files changed, 521 insertions(+), 33 deletions(-)
+
+diff --git a/libsanitizer/asan/Makefile.am b/libsanitizer/asan/Makefile.am
+index 3f07a83..851774c 100644
+--- a/libsanitizer/asan/Makefile.am
++++ b/libsanitizer/asan/Makefile.am
+@@ -9,6 +9,12 @@ DEFS += -DMAC_INTERPOSE_FUNCTIONS -DMISSING_BLOCKS_SUPPORT
+ endif
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic -Wno-long-long  -fPIC -fno-builtin -fno-exceptions -fno-rtti -fomit-frame-pointer -funwind-tables -fvisibility=hidden -Wno-variadic-macros
+ AM_CXXFLAGS += $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++AM_CXXFLAGS += -include $(top_builddir)/config.h
++if LIBBACKTRACE_SUPPORTED
++# backtrace-rename.h is included from config.h, provide -I dir for it
++AM_CXXFLAGS += -I $(top_srcdir)
++endif
++
+ ACLOCAL_AMFLAGS = -I $(top_srcdir) -I $(top_srcdir)/config
+ 
+ toolexeclib_LTLIBRARIES = libasan.la
+diff --git a/libsanitizer/asan/Makefile.in b/libsanitizer/asan/Makefile.in
+index 273eb4b..a9b889d 100644
+--- a/libsanitizer/asan/Makefile.in
++++ b/libsanitizer/asan/Makefile.in
+@@ -37,8 +37,10 @@ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+ @USING_MAC_INTERPOSE_TRUE@am__append_1 = -DMAC_INTERPOSE_FUNCTIONS -DMISSING_BLOCKS_SUPPORT
+-@USING_MAC_INTERPOSE_FALSE@am__append_2 = $(top_builddir)/interception/libinterception.la
+-@LIBBACKTRACE_SUPPORTED_TRUE@am__append_3 = $(top_builddir)/libbacktrace/libsanitizer_libbacktrace.la
++# backtrace-rename.h is included from config.h, provide -I dir for it
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_2 = -I $(top_srcdir)
++@USING_MAC_INTERPOSE_FALSE@am__append_3 = $(top_builddir)/interception/libinterception.la
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_4 = $(top_builddir)/libbacktrace/libsanitizer_libbacktrace.la
+ subdir = asan
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -86,8 +88,8 @@ LTLIBRARIES = $(toolexeclib_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ libasan_la_DEPENDENCIES =  \
+ 	$(top_builddir)/sanitizer_common/libsanitizer_common.la \
+-	$(top_builddir)/lsan/libsanitizer_lsan.la $(am__append_2) \
+-	$(am__append_3) $(am__DEPENDENCIES_1)
++	$(top_builddir)/lsan/libsanitizer_lsan.la $(am__append_3) \
++	$(am__append_4) $(am__DEPENDENCIES_1)
+ am__objects_1 = asan_allocator2.lo asan_dll_thunk.lo \
+ 	asan_fake_stack.lo asan_globals.lo asan_interceptors.lo \
+ 	asan_linux.lo asan_mac.lo asan_malloc_linux.lo \
+@@ -267,7 +269,8 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic \
+ 	-Wno-long-long -fPIC -fno-builtin -fno-exceptions -fno-rtti \
+ 	-fomit-frame-pointer -funwind-tables -fvisibility=hidden \
+-	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS) -include \
++	$(top_builddir)/config.h $(am__append_2)
+ ACLOCAL_AMFLAGS = -I $(top_srcdir) -I $(top_srcdir)/config
+ toolexeclib_LTLIBRARIES = libasan.la
+ nodist_toolexeclib_HEADERS = libasan_preinit.o
+@@ -295,8 +298,8 @@ asan_files = \
+ libasan_la_SOURCES = $(asan_files)
+ libasan_la_LIBADD =  \
+ 	$(top_builddir)/sanitizer_common/libsanitizer_common.la \
+-	$(top_builddir)/lsan/libsanitizer_lsan.la $(am__append_2) \
+-	$(am__append_3) $(LIBSTDCXX_RAW_CXX_LDFLAGS)
++	$(top_builddir)/lsan/libsanitizer_lsan.la $(am__append_3) \
++	$(am__append_4) $(LIBSTDCXX_RAW_CXX_LDFLAGS)
+ libasan_la_LDFLAGS = -version-info `grep -v '^\#' $(srcdir)/libtool-version` $(link_libasan)
+ 
+ # Work around what appears to be a GNU make bug handling MAKEFLAGS
+diff --git a/libsanitizer/config.h.in b/libsanitizer/config.h.in
+index 4bd6a7f..12ebac6 100644
+--- a/libsanitizer/config.h.in
++++ b/libsanitizer/config.h.in
+@@ -25,6 +25,9 @@
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
+ 
++/* Define to 1 if you have the `dlvsym' function. */
++#undef HAVE_DLVSYM
++
+ /* Define if dl_iterate_phdr is available. */
+ #undef HAVE_DL_ITERATE_PHDR
+ 
+@@ -34,6 +37,27 @@
+ /* Define if getexecname is available. */
+ #undef HAVE_GETEXECNAME
+ 
++/* Define to 1 if you have the <glob.h> header file. */
++#undef HAVE_GLOB_H
++
++/* Define to 1 if `glob_t' is a member of `gl_closedir'. */
++#undef HAVE_GLOB_T_GL_CLOSEDIR
++
++/* Define to 1 if `glob_t' is a member of `gl_flags'. */
++#undef HAVE_GLOB_T_GL_FLAGS
++
++/* Define to 1 if `glob_t' is a member of `gl_lstat'. */
++#undef HAVE_GLOB_T_GL_LSTAT
++
++/* Define to 1 if `glob_t' is a member of `gl_opendir'. */
++#undef HAVE_GLOB_T_GL_OPENDIR
++
++/* Define to 1 if `glob_t' is a member of `gl_readdir'. */
++#undef HAVE_GLOB_T_GL_READDIR
++
++/* Define to 1 if `glob_t' is a member of `gl_stat'. */
++#undef HAVE_GLOB_T_GL_STAT
++
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
+ 
+@@ -43,6 +67,12 @@
+ /* Define to 1 if you have the <memory.h> header file. */
+ #undef HAVE_MEMORY_H
+ 
++/* Define to 1 if you have the `nanosleep' function. */
++#undef HAVE_NANOSLEEP
++
++/* Define to 1 if you have the <netrom/netrom.h> header file. */
++#undef HAVE_NETROM_NETROM_H
++
+ /* Define to 1 if you have the <stdint.h> header file. */
+ #undef HAVE_STDINT_H
+ 
+@@ -55,6 +85,9 @@
+ /* Define to 1 if you have the <string.h> header file. */
+ #undef HAVE_STRING_H
+ 
++/* Define to 1 if struct sigaction has member sa_mask as last field */
++#undef HAVE_STRUCT_SIGACTION_SA_MASK_LAST
++
+ /* Define to 1 if you have the __sync functions */
+ #undef HAVE_SYNC_FUNCTIONS
+ 
+@@ -70,12 +103,24 @@
+ /* Define to 1 if you have the <sys/types.h> header file. */
+ #undef HAVE_SYS_TYPES_H
+ 
++/* Define to 1 if you have the <sys/ustat.h> header file. */
++#undef HAVE_SYS_USTAT_H
++
+ /* Define to 1 if you have the <sys/vfs.h> header file. */
+ #undef HAVE_SYS_VFS_H
+ 
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the `usleep' function. */
++#undef HAVE_USLEEP
++
++/* Define to 1 if you have the <utime.h> header file. */
++#undef HAVE_UTIME_H
++
++/* Define to 1 if you have the <wordexp.h> header file. */
++#undef HAVE_WORDEXP_H
++
+ /* Define to the sub-directory in which libtool stores uninstalled libraries.
+    */
+ #undef LT_OBJDIR
+@@ -113,6 +158,9 @@
+ /* The size of `short', as computed by sizeof. */
+ #undef SIZEOF_SHORT
+ 
++/* The size of `sigset_t', as computed by sizeof. */
++#undef SIZEOF_SIGSET_T
++
+ /* The size of `struct statfs64', as computed by sizeof. */
+ #undef SIZEOF_STRUCT_STATFS64
+ 
+@@ -122,6 +170,9 @@
+ /* Define to 1 if you have the ANSI C header files. */
+ #undef STDC_HEADERS
+ 
++/* Define to type of struct sigaction member sa_mask */
++#undef STRUCT_SIGACTION_SA_FLAGS_TYPE
++
+ /* Enable extensions on AIX 3, Interix.  */
+ #ifndef _ALL_SOURCE
+ # undef _ALL_SOURCE
+diff --git a/libsanitizer/configure b/libsanitizer/configure
+index c636212..bfbaf52 100755
+--- a/libsanitizer/configure
++++ b/libsanitizer/configure
+@@ -2171,6 +2171,63 @@ rm -f conftest.val
+ 
+ } # ac_fn_c_compute_int
+ 
++# ac_fn_c_check_member LINENO AGGR MEMBER VAR INCLUDES
++# ----------------------------------------------------
++# Tries to find if the field MEMBER exists in type AGGR, after including
++# INCLUDES, setting cache variable VAR accordingly.
++ac_fn_c_check_member ()
++{
++  as_lineno=${as_lineno-"$1"} as_lineno_stack=as_lineno_stack=$as_lineno_stack
++  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $2.$3" >&5
++$as_echo_n "checking for $2.$3... " >&6; }
++if { as_var=$4; eval "test \"\${$as_var+set}\" = set"; }; then :
++  $as_echo_n "(cached) " >&6
++else
++  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++$5
++int
++main ()
++{
++static $2 ac_aggr;
++if (ac_aggr.$3)
++return 0;
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++  eval "$4=yes"
++else
++  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++$5
++int
++main ()
++{
++static $2 ac_aggr;
++if (sizeof ac_aggr.$3)
++return 0;
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++  eval "$4=yes"
++else
++  eval "$4=no"
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++eval ac_res=\$$4
++	       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
++$as_echo "$ac_res" >&6; }
++  eval $as_lineno_stack; test "x$as_lineno_stack" = x && { as_lineno=; unset as_lineno;}
++
++} # ac_fn_c_check_member
++
+ # ac_fn_c_check_type LINENO TYPE VAR INCLUDES
+ # -------------------------------------------
+ # Tests whether TYPE exists after having included INCLUDES, setting cache
+@@ -12019,7 +12076,7 @@ else
+   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
+   lt_status=$lt_dlunknown
+   cat > conftest.$ac_ext <<_LT_EOF
+-#line 12022 "configure"
++#line 12079 "configure"
+ #include "confdefs.h"
+ 
+ #if HAVE_DLFCN_H
+@@ -12125,7 +12182,7 @@ else
+   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
+   lt_status=$lt_dlunknown
+   cat > conftest.$ac_ext <<_LT_EOF
+-#line 12128 "configure"
++#line 12185 "configure"
+ #include "confdefs.h"
+ 
+ #if HAVE_DLFCN_H
+@@ -15531,6 +15588,157 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 
++for ac_header in utime.h wordexp.h glob.h netrom/netrom.h sys/ustat.h
++do :
++  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
++ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
++eval as_val=\$$as_ac_Header
++   if test "x$as_val" = x""yes; then :
++  cat >>confdefs.h <<_ACEOF
++#define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
++done
++
++ac_fn_c_check_member "$LINENO" "glob_t" "gl_flags" "ac_cv_member_glob_t_gl_flags" "#include <glob.h>
++"
++if test "x$ac_cv_member_glob_t_gl_flags" = x""yes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_GLOB_T_GL_FLAGS 1
++_ACEOF
++
++
++fi
++ac_fn_c_check_member "$LINENO" "glob_t" "gl_closedir" "ac_cv_member_glob_t_gl_closedir" "#include <glob.h>
++"
++if test "x$ac_cv_member_glob_t_gl_closedir" = x""yes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_GLOB_T_GL_CLOSEDIR 1
++_ACEOF
++
++
++fi
++ac_fn_c_check_member "$LINENO" "glob_t" "gl_readdir" "ac_cv_member_glob_t_gl_readdir" "#include <glob.h>
++"
++if test "x$ac_cv_member_glob_t_gl_readdir" = x""yes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_GLOB_T_GL_READDIR 1
++_ACEOF
++
++
++fi
++ac_fn_c_check_member "$LINENO" "glob_t" "gl_opendir" "ac_cv_member_glob_t_gl_opendir" "#include <glob.h>
++"
++if test "x$ac_cv_member_glob_t_gl_opendir" = x""yes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_GLOB_T_GL_OPENDIR 1
++_ACEOF
++
++
++fi
++ac_fn_c_check_member "$LINENO" "glob_t" "gl_lstat" "ac_cv_member_glob_t_gl_lstat" "#include <glob.h>
++"
++if test "x$ac_cv_member_glob_t_gl_lstat" = x""yes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_GLOB_T_GL_LSTAT 1
++_ACEOF
++
++
++fi
++ac_fn_c_check_member "$LINENO" "glob_t" "gl_stat" "ac_cv_member_glob_t_gl_stat" "#include <glob.h>
++"
++if test "x$ac_cv_member_glob_t_gl_stat" = x""yes; then :
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_GLOB_T_GL_STAT 1
++_ACEOF
++
++
++fi
++
++# The cast to long int works around a bug in the HP C Compiler
++# version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
++# declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
++# This bug is HP SR number 8606223364.
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking size of sigset_t" >&5
++$as_echo_n "checking size of sigset_t... " >&6; }
++if test "${ac_cv_sizeof_sigset_t+set}" = set; then :
++  $as_echo_n "(cached) " >&6
++else
++  if ac_fn_c_compute_int "$LINENO" "(long int) (sizeof (sigset_t))" "ac_cv_sizeof_sigset_t"        "#include <signal.h>
++"; then :
++
++else
++  if test "$ac_cv_type_sigset_t" = yes; then
++     { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
++$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
++{ as_fn_set_status 77
++as_fn_error "cannot compute sizeof (sigset_t)
++See \`config.log' for more details." "$LINENO" 5; }; }
++   else
++     ac_cv_sizeof_sigset_t=0
++   fi
++fi
++
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_sizeof_sigset_t" >&5
++$as_echo "$ac_cv_sizeof_sigset_t" >&6; }
++
++
++
++cat >>confdefs.h <<_ACEOF
++#define SIZEOF_SIGSET_T $ac_cv_sizeof_sigset_t
++_ACEOF
++
++
++case "${target}" in
++  *-*-*uclibc*)
++$as_echo "#define HAVE_STRUCT_SIGACTION_SA_MASK_LAST 1" >>confdefs.h
++;;
++  *)
++$as_echo "#define HAVE_STRUCT_SIGACTION_SA_MASK_LAST 0" >>confdefs.h
++;;
++esac
++case "${target}" in
++  alpha*-*-*uclibc*|mips*-*-*uclibc*)
++
++$as_echo "#define STRUCT_SIGACTION_SA_FLAGS_TYPE unsigned" >>confdefs.h
++;;
++  *-*-*uclibc*)
++$as_echo "#define STRUCT_SIGACTION_SA_FLAGS_TYPE unsigned long" >>confdefs.h
++;;
++esac
++for ac_func in usleep nanosleep
++do :
++  as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
++ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
++eval as_val=\$$as_ac_var
++   if test "x$as_val" = x""yes; then :
++  cat >>confdefs.h <<_ACEOF
++#define `$as_echo "HAVE_$ac_func" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++done
++
++for ac_func in dlvsym
++do :
++  ac_fn_c_check_func "$LINENO" "dlvsym" "ac_cv_func_dlvsym"
++if test "x$ac_cv_func_dlvsym" = x""yes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_DLVSYM 1
++_ACEOF
++
++fi
++done
++
+ 
+ if test "${multilib}" = "yes"; then
+   multilib_arg="--enable-multilib"
+diff --git a/libsanitizer/configure.ac b/libsanitizer/configure.ac
+index 746c216..12d4f3a 100644
+--- a/libsanitizer/configure.ac
++++ b/libsanitizer/configure.ac
+@@ -92,6 +92,29 @@ AC_CHECK_SIZEOF([struct statfs64],[],[
+ # include <sys/vfs.h>
+ #endif
+ ])
++AC_CHECK_HEADERS([utime.h wordexp.h glob.h netrom/netrom.h sys/ustat.h])
++dnl check POSIX glob versus GNU glob extensions
++AC_CHECK_MEMBERS([glob_t.gl_flags, glob_t.gl_closedir, glob_t.gl_readdir, glob_t.gl_opendir, glob_t.gl_lstat, glob_t.gl_stat],[],[],[[#include <glob.h>]])
++AC_CHECK_SIZEOF([sigset_t],[],[#include <signal.h>])
++dnl uClibc uses a cache-friendly, linux kernel-like struct sigaction layout
++case "${target}" in
++  *-*-*uclibc*) AC_DEFINE([HAVE_STRUCT_SIGACTION_SA_MASK_LAST],[1],
++	[Define to 1 if struct sigaction has member sa_mask as last field]);;
++  *) AC_DEFINE([HAVE_STRUCT_SIGACTION_SA_MASK_LAST],[0],
++	[Define to 1 if struct sigaction has member sa_mask as last field]);;
++esac
++dnl struct sigaction typeof sa_flags in uClibc
++case "${target}" in
++  alpha*-*-*uclibc*|mips*-*-*uclibc*)
++	AC_DEFINE([STRUCT_SIGACTION_SA_FLAGS_TYPE],[unsigned],
++	[Define to type of struct sigaction member sa_mask]);;
++  *-*-*uclibc*) AC_DEFINE([STRUCT_SIGACTION_SA_FLAGS_TYPE],[unsigned long],
++	[Define to type of struct sigaction member sa_mask]);;
++esac
++dnl usleep was removed, try nanosleep (RT) [or clock_nanosleep (ADVANCED RT)]
++AC_CHECK_FUNCS([usleep nanosleep])
++dnl uClibc dl does not support dlvsym
++AC_CHECK_FUNCS([dlvsym])
+ 
+ if test "${multilib}" = "yes"; then
+   multilib_arg="--enable-multilib"
+diff --git a/libsanitizer/interception/interception_linux.cc b/libsanitizer/interception/interception_linux.cc
+index 0a8df47..efda8f5 100644
+--- a/libsanitizer/interception/interception_linux.cc
++++ b/libsanitizer/interception/interception_linux.cc
+@@ -23,9 +23,11 @@ bool GetRealFunctionAddress(const char *func_name, uptr *func_addr,
+ }
+ 
+ #if !defined(__ANDROID__)  // android does not have dlvsym
++# ifdef HAVE_DLVSYM
+ void *GetFuncAddrVer(const char *func_name, const char *ver) {
+   return dlvsym(RTLD_NEXT, func_name, ver);
+ }
++# endif /* HAVE_DLVSYM */
+ #endif  // !defined(__ANDROID__)
+ 
+ }  // namespace __interception
+diff --git a/libsanitizer/interception/interception_linux.h b/libsanitizer/interception/interception_linux.h
+index 5ab24db..7ea124e 100644
+--- a/libsanitizer/interception/interception_linux.h
++++ b/libsanitizer/interception/interception_linux.h
+@@ -41,5 +41,13 @@ void *GetFuncAddrVer(const char *func_name, const char *ver);
+      INTERCEPT_FUNCTION_LINUX(func)
+ #endif  // !defined(__ANDROID__)
+ 
++
++#ifndef HAVE_DLVSYM
++/* Undo marketing crap above. Probe functionality, use result to decide.  */
++# undef INTERCEPT_FUNCTION_VER_LINUX
++# define INTERCEPT_FUNCTION_VER_LINUX(func, symver) \
++     INTERCEPT_FUNCTION_LINUX(func)
++#endif
++
+ #endif  // INTERCEPTION_LINUX_H
+ #endif  // __linux__
+diff --git a/libsanitizer/lsan/Makefile.am b/libsanitizer/lsan/Makefile.am
+index 7a508c1..d01d7c3 100644
+--- a/libsanitizer/lsan/Makefile.am
++++ b/libsanitizer/lsan/Makefile.am
+@@ -6,6 +6,12 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ DEFS = -D_GNU_SOURCE -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS 
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic -Wno-long-long  -fPIC -fno-builtin -fno-exceptions -fno-rtti -fomit-frame-pointer -funwind-tables -fvisibility=hidden -Wno-variadic-macros
+ AM_CXXFLAGS += $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++AM_CXXFLAGS += -include $(top_builddir)/config.h
++if LIBBACKTRACE_SUPPORTED
++# backtrace-rename.h is included from config.h, provide -I dir for it
++AM_CXXFLAGS += -I $(top_srcdir)
++endif
++
+ ACLOCAL_AMFLAGS = -I m4
+ 
+ noinst_LTLIBRARIES = libsanitizer_lsan.la
+diff --git a/libsanitizer/lsan/Makefile.in b/libsanitizer/lsan/Makefile.in
+index 47caebc..8b44eda 100644
+--- a/libsanitizer/lsan/Makefile.in
++++ b/libsanitizer/lsan/Makefile.in
+@@ -35,7 +35,9 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-@LIBBACKTRACE_SUPPORTED_TRUE@am__append_1 = $(top_builddir)/libbacktrace/libsanitizer_libbacktrace.la
++# backtrace-rename.h is included from config.h, provide -I dir for it
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_1 = -I $(top_srcdir)
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_2 = $(top_builddir)/libbacktrace/libsanitizer_libbacktrace.la
+ subdir = lsan
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -83,7 +85,7 @@ am__DEPENDENCIES_1 =
+ liblsan_la_DEPENDENCIES =  \
+ 	$(top_builddir)/sanitizer_common/libsanitizer_common.la \
+ 	$(top_builddir)/interception/libinterception.la \
+-	$(am__append_1) $(am__DEPENDENCIES_1)
++	$(am__append_2) $(am__DEPENDENCIES_1)
+ am__objects_1 = lsan_common.lo lsan_common_linux.lo
+ am__objects_2 = $(am__objects_1) lsan.lo lsan_allocator.lo \
+ 	lsan_interceptors.lo lsan_preinit.lo lsan_thread.lo
+@@ -260,7 +262,8 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic \
+ 	-Wno-long-long -fPIC -fno-builtin -fno-exceptions -fno-rtti \
+ 	-fomit-frame-pointer -funwind-tables -fvisibility=hidden \
+-	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS) -include \
++	$(top_builddir)/config.h $(am__append_1)
+ ACLOCAL_AMFLAGS = -I m4
+ noinst_LTLIBRARIES = libsanitizer_lsan.la
+ @LSAN_SUPPORTED_TRUE@toolexeclib_LTLIBRARIES = liblsan.la
+@@ -281,7 +284,7 @@ liblsan_la_SOURCES = $(lsan_files)
+ liblsan_la_LIBADD =  \
+ 	$(top_builddir)/sanitizer_common/libsanitizer_common.la \
+ 	$(top_builddir)/interception/libinterception.la \
+-	$(am__append_1) $(LIBSTDCXX_RAW_CXX_LDFLAGS)
++	$(am__append_2) $(LIBSTDCXX_RAW_CXX_LDFLAGS)
+ liblsan_la_LDFLAGS = -version-info `grep -v '^\#' $(srcdir)/libtool-version` $(link_liblsan)
+ 
+ # Work around what appears to be a GNU make bug handling MAKEFLAGS
+diff --git a/libsanitizer/sanitizer_common/Makefile.am b/libsanitizer/sanitizer_common/Makefile.am
+index 8e9038d..e5b6f07 100644
+--- a/libsanitizer/sanitizer_common/Makefile.am
++++ b/libsanitizer/sanitizer_common/Makefile.am
+@@ -6,6 +6,11 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ DEFS = -D_GNU_SOURCE -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS 
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic -Wno-long-long  -fPIC -fno-builtin -fno-exceptions -fno-rtti -fomit-frame-pointer -funwind-tables -fvisibility=hidden -Wno-variadic-macros
+ AM_CXXFLAGS += $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++AM_CXXFLAGS += -include $(top_builddir)/config.h
++if LIBBACKTRACE_SUPPORTED
++# backtrace-rename.h is included from config.h, provide -I dir for it
++AM_CXXFLAGS += -I $(top_srcdir)
++endif
+ if LIBBACKTRACE_SUPPORTED
+ AM_CXXFLAGS += -DSANITIZER_LIBBACKTRACE -DSANITIZER_CP_DEMANGLE \
+ 	       -I $(top_srcdir)/../libbacktrace \
+diff --git a/libsanitizer/sanitizer_common/Makefile.in b/libsanitizer/sanitizer_common/Makefile.in
+index e9fd115..fb6877c 100644
+--- a/libsanitizer/sanitizer_common/Makefile.in
++++ b/libsanitizer/sanitizer_common/Makefile.in
+@@ -35,12 +35,14 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-@LIBBACKTRACE_SUPPORTED_TRUE@am__append_1 = -DSANITIZER_LIBBACKTRACE -DSANITIZER_CP_DEMANGLE \
+-@LIBBACKTRACE_SUPPORTED_TRUE@	       -I $(top_srcdir)/../libbacktrace \
+-@LIBBACKTRACE_SUPPORTED_TRUE@	       -I $(top_builddir)/libbacktrace \
+-@LIBBACKTRACE_SUPPORTED_TRUE@	       -I $(top_srcdir)/../include \
+-@LIBBACKTRACE_SUPPORTED_TRUE@	       -include $(top_srcdir)/libbacktrace/backtrace-rename.h
+-
++# backtrace-rename.h is included from config.h, provide -I dir for it
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_1 = -I $(top_srcdir) \
++@LIBBACKTRACE_SUPPORTED_TRUE@	-DSANITIZER_LIBBACKTRACE \
++@LIBBACKTRACE_SUPPORTED_TRUE@	-DSANITIZER_CP_DEMANGLE -I \
++@LIBBACKTRACE_SUPPORTED_TRUE@	$(top_srcdir)/../libbacktrace -I \
++@LIBBACKTRACE_SUPPORTED_TRUE@	$(top_builddir)/libbacktrace -I \
++@LIBBACKTRACE_SUPPORTED_TRUE@	$(top_srcdir)/../include -include \
++@LIBBACKTRACE_SUPPORTED_TRUE@	$(top_srcdir)/libbacktrace/backtrace-rename.h
+ subdir = sanitizer_common
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -244,8 +246,8 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic \
+ 	-Wno-long-long -fPIC -fno-builtin -fno-exceptions -fno-rtti \
+ 	-fomit-frame-pointer -funwind-tables -fvisibility=hidden \
+-	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS) \
+-	$(am__append_1)
++	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS) -include \
++	$(top_builddir)/config.h $(am__append_1)
+ ACLOCAL_AMFLAGS = -I m4
+ noinst_LTLIBRARIES = libsanitizer_common.la
+ sanitizer_common_files = \
+diff --git a/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc b/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc
+index e301dc1..3c9c409 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc
++++ b/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc
+@@ -863,33 +863,43 @@ static void unpoison_glob_t(void *ctx, __sanitizer_glob_t *pglob) {
+ static THREADLOCAL __sanitizer_glob_t *pglob_copy;
+ static THREADLOCAL void *glob_ctx;
+ 
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
+ static void wrapped_gl_closedir(void *dir) {
+   COMMON_INTERCEPTOR_UNPOISON_PARAM(glob_ctx, 1);
+   pglob_copy->gl_closedir(dir);
+ }
++#endif
+ 
++#ifdef HAVE_GLOB_T_GL_READDIR
+ static void *wrapped_gl_readdir(void *dir) {
+   COMMON_INTERCEPTOR_UNPOISON_PARAM(glob_ctx, 1);
+   return pglob_copy->gl_readdir(dir);
+ }
++#endif
+ 
++#ifdef HAVE_GLOB_T_GL_OPENDIR
+ static void *wrapped_gl_opendir(const char *s) {
+   COMMON_INTERCEPTOR_UNPOISON_PARAM(glob_ctx, 1);
+   COMMON_INTERCEPTOR_WRITE_RANGE(glob_ctx, s, REAL(strlen)(s) + 1);
+   return pglob_copy->gl_opendir(s);
+ }
++#endif
+ 
++#ifdef HAVE_GLOB_T_GL_LSTAT
+ static int wrapped_gl_lstat(const char *s, void *st) {
+   COMMON_INTERCEPTOR_UNPOISON_PARAM(glob_ctx, 2);
+   COMMON_INTERCEPTOR_WRITE_RANGE(glob_ctx, s, REAL(strlen)(s) + 1);
+   return pglob_copy->gl_lstat(s, st);
+ }
++#endif
+ 
++#ifdef HAVE_GLOB_T_GL_STAT
+ static int wrapped_gl_stat(const char *s, void *st) {
+   COMMON_INTERCEPTOR_UNPOISON_PARAM(glob_ctx, 2);
+   COMMON_INTERCEPTOR_WRITE_RANGE(glob_ctx, s, REAL(strlen)(s) + 1);
+   return pglob_copy->gl_stat(s, st);
+ }
++#endif
+ 
+ INTERCEPTOR(int, glob, const char *pattern, int flags,
+             int (*errfunc)(const char *epath, int eerrno),
+@@ -897,25 +907,64 @@ INTERCEPTOR(int, glob, const char *pattern, int flags,
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, glob, pattern, flags, errfunc, pglob);
+   __sanitizer_glob_t glob_copy = {
+-      0,                  0,                   0,
+-      0,                  wrapped_gl_closedir, wrapped_gl_readdir,
+-      wrapped_gl_opendir, wrapped_gl_lstat,    wrapped_gl_stat};
++	0,
++	0,
++	0
++#ifdef HAVE_GLOB_T_GL_FLAGS
++	,0
++#endif
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
++	,wrapped_gl_closedir
++#endif
++#ifdef HAVE_GLOB_T_GL_READDIR
++	,wrapped_gl_readdir
++#endif
++#ifdef HAVE_GLOB_T_GL_OPENDIR
++	,wrapped_gl_opendir
++#endif
++#ifdef HAVE_GLOB_T_GL_LSTAT
++	,wrapped_gl_lstat
++#endif
++#ifdef HAVE_GLOB_T_GL_STAT
++	,wrapped_gl_stat
++#endif
++  };
+   if (flags & glob_altdirfunc) {
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
+     Swap(pglob->gl_closedir, glob_copy.gl_closedir);
++#endif
++#ifdef HAVE_GLOB_T_GL_READDIR
+     Swap(pglob->gl_readdir, glob_copy.gl_readdir);
++#endif
++#ifdef HAVE_GLOB_T_GL_OPENDIR
+     Swap(pglob->gl_opendir, glob_copy.gl_opendir);
++#endif
++#ifdef HAVE_GLOB_T_GL_LSTAT
+     Swap(pglob->gl_lstat, glob_copy.gl_lstat);
++#endif
++#ifdef HAVE_GLOB_T_GL_STAT
+     Swap(pglob->gl_stat, glob_copy.gl_stat);
++#endif
+     pglob_copy = &glob_copy;
+     glob_ctx = ctx;
+   }
+   int res = REAL(glob)(pattern, flags, errfunc, pglob);
+   if (flags & glob_altdirfunc) {
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
+     Swap(pglob->gl_closedir, glob_copy.gl_closedir);
++#endif
++#ifdef HAVE_GLOB_T_GL_READDIR
+     Swap(pglob->gl_readdir, glob_copy.gl_readdir);
++#endif
++#ifdef HAVE_GLOB_T_GL_OPENDIR
+     Swap(pglob->gl_opendir, glob_copy.gl_opendir);
++#endif
++#ifdef HAVE_GLOB_T_GL_LSTAT
+     Swap(pglob->gl_lstat, glob_copy.gl_lstat);
++#endif
++#ifdef HAVE_GLOB_T_GL_STAT
+     Swap(pglob->gl_stat, glob_copy.gl_stat);
++#endif
+   }
+   pglob_copy = 0;
+   glob_ctx = 0;
+@@ -929,25 +978,64 @@ INTERCEPTOR(int, glob64, const char *pattern, int flags,
+   void *ctx;
+   COMMON_INTERCEPTOR_ENTER(ctx, glob64, pattern, flags, errfunc, pglob);
+   __sanitizer_glob_t glob_copy = {
+-      0,                  0,                   0,
+-      0,                  wrapped_gl_closedir, wrapped_gl_readdir,
+-      wrapped_gl_opendir, wrapped_gl_lstat,    wrapped_gl_stat};
++	0,
++	0,
++	0
++#ifdef HAVE_GLOB_T_GL_FLAGS
++	,0
++#endif
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
++	,wrapped_gl_closedir
++#endif
++#ifdef HAVE_GLOB_T_GL_READDIR
++	,wrapped_gl_readdir
++#endif
++#ifdef HAVE_GLOB_T_GL_OPENDIR
++	,wrapped_gl_opendir
++#endif
++#ifdef HAVE_GLOB_T_GL_LSTAT
++	,wrapped_gl_lstat
++#endif
++#ifdef HAVE_GLOB_T_GL_STAT
++	,wrapped_gl_stat
++#endif
++  };
+   if (flags & glob_altdirfunc) {
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
+     Swap(pglob->gl_closedir, glob_copy.gl_closedir);
++#endif
++#ifdef HAVE_GLOB_T_GL_READDIR
+     Swap(pglob->gl_readdir, glob_copy.gl_readdir);
++#endif
++#ifdef HAVE_GLOB_T_GL_OPENDIR
+     Swap(pglob->gl_opendir, glob_copy.gl_opendir);
++#endif
++#ifdef HAVE_GLOB_T_GL_LSTAT
+     Swap(pglob->gl_lstat, glob_copy.gl_lstat);
++#endif
++#ifdef HAVE_GLOB_T_GL_STAT
+     Swap(pglob->gl_stat, glob_copy.gl_stat);
++#endif
+     pglob_copy = &glob_copy;
+     glob_ctx = ctx;
+   }
+   int res = REAL(glob64)(pattern, flags, errfunc, pglob);
+   if (flags & glob_altdirfunc) {
++#ifdef HAVE_GLOB_T_GL_CLOSEDIR
+     Swap(pglob->gl_closedir, glob_copy.gl_closedir);
++#endif
++#ifdef HAVE_GLOB_T_GL_READDIR
+     Swap(pglob->gl_readdir, glob_copy.gl_readdir);
++#endif
++#ifdef HAVE_GLOB_T_GL_OPENDIR
+     Swap(pglob->gl_opendir, glob_copy.gl_opendir);
++#endif
++#ifdef HAVE_GLOB_T_GL_LSTAT
+     Swap(pglob->gl_lstat, glob_copy.gl_lstat);
++#endif
++#ifdef HAVE_GLOB_T_GL_STAT
+     Swap(pglob->gl_stat, glob_copy.gl_stat);
++#endif
+   }
+   pglob_copy = 0;
+   glob_ctx = 0;
+diff --git a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc
+index 196eb3b..d6e1021 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cc
+@@ -45,7 +45,9 @@
+ #if SANITIZER_LINUX
+ #include <mntent.h>
+ #include <netinet/ether.h>
++# ifdef HAVE_UTIME_H
+ #include <utime.h>
++# endif
+ #include <sys/mount.h>
+ #include <sys/ptrace.h>
+ #include <sys/sysinfo.h>
+@@ -64,7 +66,9 @@
+ 
+ #if !SANITIZER_ANDROID
+ #include <sys/ucontext.h>
++# ifdef HAVE_WORDEXP_H
+ #include <wordexp.h>
++# endif
+ #endif
+ 
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID
+@@ -73,7 +77,9 @@
+ #include <net/if_ppp.h>
+ #include <netax25/ax25.h>
+ #include <netipx/ipx.h>
++# ifdef HAVE_NETROM_NETROM_H
+ #include <netrom/netrom.h>
++# endif
+ #include <scsi/scsi.h>
+ #include <sys/mtio.h>
+ #include <sys/kd.h>
+@@ -81,7 +87,9 @@
+ #include <sys/statvfs.h>
+ #include <sys/timex.h>
+ #include <sys/user.h>
++# ifdef HAVE_SYS_USTAT_H
+ #include <sys/ustat.h>
++# endif
+ #include <linux/cyclades.h>
+ #include <linux/if_eql.h>
+ #include <linux/if_plip.h>
+@@ -158,12 +166,16 @@ namespace __sanitizer {
+   unsigned __user_cap_header_struct_sz =
+       sizeof(struct __user_cap_header_struct);
+   unsigned __user_cap_data_struct_sz = sizeof(struct __user_cap_data_struct);
++# ifdef HAVE_UTIME_H
+   unsigned struct_utimbuf_sz = sizeof(struct utimbuf);
++# endif
+   unsigned struct_new_utsname_sz = sizeof(struct new_utsname);
+   unsigned struct_old_utsname_sz = sizeof(struct old_utsname);
+   unsigned struct_oldold_utsname_sz = sizeof(struct oldold_utsname);
+   unsigned struct_itimerspec_sz = sizeof(struct itimerspec);
++# ifdef HAVE_SYS_USTAT_H
+   unsigned struct_ustat_sz = sizeof(struct ustat);
++# endif
+ #endif // SANITIZER_LINUX
+ 
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID
+@@ -207,7 +219,9 @@ namespace __sanitizer {
+ 
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID
+   int glob_nomatch = GLOB_NOMATCH;
++# ifdef GLOB_ALTDIRFUNC
+   int glob_altdirfunc = GLOB_ALTDIRFUNC;
++# endif
+ #endif
+ 
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID && \
+@@ -309,7 +323,9 @@ namespace __sanitizer {
+   unsigned struct_kbkeycode_sz = sizeof(struct kbkeycode);
+   unsigned struct_kbsentry_sz = sizeof(struct kbsentry);
+   unsigned struct_mtconfiginfo_sz = sizeof(struct mtconfiginfo);
++# ifdef HAVE_NETROM_NETROM_H
+   unsigned struct_nr_parms_struct_sz = sizeof(struct nr_parms_struct);
++# endif
+   unsigned struct_ppp_stats_sz = sizeof(struct ppp_stats);
+   unsigned struct_scc_modem_sz = sizeof(struct scc_modem);
+   unsigned struct_scc_stat_sz = sizeof(struct scc_stat);
+@@ -748,10 +764,18 @@ namespace __sanitizer {
+   unsigned IOCTL_SIOCAX25SETPARMS = SIOCAX25SETPARMS;
+   unsigned IOCTL_SIOCDEVPLIP = SIOCDEVPLIP;
+   unsigned IOCTL_SIOCIPXCFGDATA = SIOCIPXCFGDATA;
++# ifdef SIOCNRDECOBS
+   unsigned IOCTL_SIOCNRDECOBS = SIOCNRDECOBS;
++# endif
++# ifdef SIOCNRGETPARMS
+   unsigned IOCTL_SIOCNRGETPARMS = SIOCNRGETPARMS;
++# endif
++# ifdef SIOCNRRTCTL
+   unsigned IOCTL_SIOCNRRTCTL = SIOCNRRTCTL;
++# endif
++# ifdef SIOCNRSETPARMS
+   unsigned IOCTL_SIOCNRSETPARMS = SIOCNRSETPARMS;
++# endif
+   unsigned IOCTL_SNDCTL_DSP_GETISPACE = SNDCTL_DSP_GETISPACE;
+   unsigned IOCTL_SNDCTL_DSP_GETOSPACE = SNDCTL_DSP_GETOSPACE;
+   unsigned IOCTL_TIOCGSERIAL = TIOCGSERIAL;
+@@ -790,12 +814,24 @@ CHECK_TYPE_SIZE(glob_t);
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_pathc);
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_pathv);
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_offs);
++# ifdef HAVE_GLOB_T_GL_FLAGS
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_flags);
++# endif
++# ifdef HAVE_GLOB_T_GL_CLOSEDIR
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_closedir);
++# endif
++# ifdef HAVE_GLOB_T_GL_READDIR
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_readdir);
++# endif
++# ifdef HAVE_GLOB_T_GL_OPENDIR
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_opendir);
++# endif
++# ifdef HAVE_GLOB_T_GL_LSTAT
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_lstat);
++# endif
++# ifdef HAVE_GLOB_T_GL_STAT
+ CHECK_SIZE_AND_OFFSET(glob_t, gl_stat);
++# endif
+ #endif
+ 
+ CHECK_TYPE_SIZE(addrinfo);
+@@ -865,11 +901,17 @@ CHECK_TYPE_SIZE(sigset_t);
+ COMPILER_CHECK(sizeof(__sanitizer_sigaction) == sizeof(struct sigaction));
+ // Can't write checks for sa_handler and sa_sigaction due to them being
+ // preprocessor macros.
++#if HAVE_STRUCT_SIGACTION_SA_MASK_LAST
++CHECK_STRUCT_SIZE_AND_OFFSET(sigaction, sa_flags);
++CHECK_STRUCT_SIZE_AND_OFFSET(sigaction, sa_restorer);
++CHECK_STRUCT_SIZE_AND_OFFSET(sigaction, sa_mask);
++#else
+ CHECK_STRUCT_SIZE_AND_OFFSET(sigaction, sa_mask);
+ CHECK_STRUCT_SIZE_AND_OFFSET(sigaction, sa_flags);
+ #if SANITIZER_LINUX
+ CHECK_STRUCT_SIZE_AND_OFFSET(sigaction, sa_restorer);
+ #endif
++#endif
+ 
+ #if SANITIZER_LINUX
+ CHECK_TYPE_SIZE(__sysctl_args);
+@@ -889,7 +931,7 @@ CHECK_TYPE_SIZE(__kernel_loff_t);
+ CHECK_TYPE_SIZE(__kernel_fd_set);
+ #endif
+ 
+-#if !SANITIZER_ANDROID
++#ifdef HAVE_WORDEXP_H
+ CHECK_TYPE_SIZE(wordexp_t);
+ CHECK_SIZE_AND_OFFSET(wordexp_t, we_wordc);
+ CHECK_SIZE_AND_OFFSET(wordexp_t, we_wordv);
+diff --git a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
+index be6e6cf..ff7c969 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
+@@ -355,10 +355,22 @@ namespace __sanitizer {
+ #elif SANITIZER_LINUX
+   struct __sanitizer_sigset_t {
+     // The size is determined by looking at sizeof of real sigset_t on linux.
+-    uptr val[128 / sizeof(uptr)];
++    /* .. except this should be * sizeof(uptr), not '/', no? */
++    uptr val[SIZEOF_SIGSET_T / sizeof(uptr)];
+   };
+ #endif
+ 
++#if HAVE_STRUCT_SIGACTION_SA_MASK_LAST
++  struct __sanitizer_sigaction {
++    union {
++      void (*sa_handler)(int sig);
++      void (*sa_sigaction)(int sig, void *siginfo, void *uctx);
++    };
++    STRUCT_SIGACTION_SA_FLAGS_TYPE sa_flags;
++    void (*sa_restorer)();
++    __sanitizer_sigset_t sa_mask;
++  };
++#else
+   struct __sanitizer_sigaction {
+     union {
+       void (*sa_handler)(int sig);
+@@ -370,6 +382,7 @@ namespace __sanitizer {
+     void (*sa_restorer)();
+ #endif
+   };
++#endif
+ 
+   struct __sanitizer_kernel_sigset_t {
+     u8 sig[8];
+@@ -448,13 +461,25 @@ namespace __sanitizer {
+     uptr gl_pathc;
+     char **gl_pathv;
+     uptr gl_offs;
++# ifdef HAVE_GLOB_T_GL_FLAGS
+     int gl_flags;
++# endif
+ 
++# ifdef HAVE_GLOB_T_GL_CLOSEDIR
+     void (*gl_closedir)(void *dirp);
++# endif
++# ifdef HAVE_GLOB_T_GL_READDIR
+     void *(*gl_readdir)(void *dirp);
++# endif
++# ifdef HAVE_GLOB_T_GL_OPENDIR
+     void *(*gl_opendir)(const char *);
++# endif
++# ifdef HAVE_GLOB_T_GL_LSTAT
+     int (*gl_lstat)(const char *, void *);
++# endif
++# ifdef HAVE_GLOB_T_GL_STAT
+     int (*gl_stat)(const char *, void *);
++# endif
+   };
+ 
+   extern int glob_nomatch;
+diff --git a/libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cc b/libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cc
+index ae782ac..c0fee36 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cc
++++ b/libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cc
+@@ -68,7 +68,14 @@ void SleepForSeconds(int seconds) {
+ }
+ 
+ void SleepForMillis(int millis) {
++#ifdef HAVE_NANOSLEEP
++  struct timespec ts;
++  ts.tv_sec = millis / 1000;
++  ts.tv_nsec = (millis % 1000) * 1000000;
++  nanosleep(&ts, NULL); /* could as well loop here */
++#elif defined HAVE_USLEEP
+   usleep(millis * 1000);
++#endif
+ }
+ 
+ void Abort() {
+diff --git a/libsanitizer/tsan/Makefile.am b/libsanitizer/tsan/Makefile.am
+index 39ed252..5694e02 100644
+--- a/libsanitizer/tsan/Makefile.am
++++ b/libsanitizer/tsan/Makefile.am
+@@ -6,6 +6,12 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ DEFS = -D_GNU_SOURCE -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS 
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic -Wno-long-long  -fPIC -fno-builtin -fno-exceptions -fno-rtti -fomit-frame-pointer -funwind-tables -fvisibility=hidden -Wno-variadic-macros
+ AM_CXXFLAGS += $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++AM_CXXFLAGS += -include $(top_builddir)/config.h
++if LIBBACKTRACE_SUPPORTED
++# backtrace-rename.h is included from config.h, provide -I dir for it
++AM_CXXFLAGS += -I $(top_srcdir)
++endif
++
+ ACLOCAL_AMFLAGS = -I m4
+ 
+ toolexeclib_LTLIBRARIES = libtsan.la
+diff --git a/libsanitizer/tsan/Makefile.in b/libsanitizer/tsan/Makefile.in
+index 01c27b9..cd61827 100644
+--- a/libsanitizer/tsan/Makefile.in
++++ b/libsanitizer/tsan/Makefile.in
+@@ -35,7 +35,9 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-@LIBBACKTRACE_SUPPORTED_TRUE@am__append_1 = $(top_builddir)/libbacktrace/libsanitizer_libbacktrace.la
++# backtrace-rename.h is included from config.h, provide -I dir for it
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_1 = -I $(top_srcdir)
++@LIBBACKTRACE_SUPPORTED_TRUE@am__append_2 = $(top_builddir)/libbacktrace/libsanitizer_libbacktrace.la
+ subdir = tsan
+ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -83,7 +85,7 @@ am__DEPENDENCIES_1 =
+ libtsan_la_DEPENDENCIES =  \
+ 	$(top_builddir)/sanitizer_common/libsanitizer_common.la \
+ 	$(top_builddir)/interception/libinterception.la \
+-	$(am__append_1) $(am__DEPENDENCIES_1)
++	$(am__append_2) $(am__DEPENDENCIES_1)
+ am__objects_1 = tsan_clock.lo tsan_interface_atomic.lo tsan_mutex.lo \
+ 	tsan_report.lo tsan_rtl_thread.lo tsan_symbolize.lo \
+ 	tsan_flags.lo tsan_interface.lo tsan_platform_linux.lo \
+@@ -276,7 +278,8 @@ gcc_version := $(shell cat $(top_srcdir)/../gcc/BASE-VER)
+ AM_CXXFLAGS = -Wall -W -Wno-unused-parameter -Wwrite-strings -pedantic \
+ 	-Wno-long-long -fPIC -fno-builtin -fno-exceptions -fno-rtti \
+ 	-fomit-frame-pointer -funwind-tables -fvisibility=hidden \
+-	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS)
++	-Wno-variadic-macros $(LIBSTDCXX_RAW_CXX_CXXFLAGS) -include \
++	$(top_builddir)/config.h $(am__append_1)
+ ACLOCAL_AMFLAGS = -I m4
+ toolexeclib_LTLIBRARIES = libtsan.la
+ tsan_files = \
+@@ -311,7 +314,7 @@ libtsan_la_SOURCES = $(tsan_files)
+ libtsan_la_LIBADD =  \
+ 	$(top_builddir)/sanitizer_common/libsanitizer_common.la \
+ 	$(top_builddir)/interception/libinterception.la \
+-	$(am__append_1) $(LIBSTDCXX_RAW_CXX_LDFLAGS)
++	$(am__append_2) $(LIBSTDCXX_RAW_CXX_LDFLAGS)
+ libtsan_la_LDFLAGS = -version-info `grep -v '^\#' $(srcdir)/libtool-version` $(link_libtsan)
+ 
+ # Work around what appears to be a GNU make bug handling MAKEFLAGS
+-- 
+1.9.1
+

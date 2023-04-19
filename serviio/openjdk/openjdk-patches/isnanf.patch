@@ -1,0 +1,20 @@
+--- hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp	2015-04-15 21:31:12.953936742 +0300
++++ /mnt/HD_a2/buildfirst/openjdk-8.40.25/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp	2015-04-08 22:07:01.197537227 +0300
+@@ -234,7 +234,7 @@
+ // checking for nanness
+ #ifdef SOLARIS
+ #ifdef SPARC
+-inline int g_isnan(float  f) { return isnanf(f); }
++inline int g_isnan(float  f) { return __isnanf(f); }
+ #else
+ // isnanf() broken on Intel Solaris use isnand()
+ inline int g_isnan(float  f) { return isnand(f); }
+@@ -243,7 +243,7 @@
+ #elif defined(__APPLE__)
+ inline int g_isnan(double f) { return isnan(f); }
+ #elif defined(LINUX) || defined(_ALLBSD_SOURCE)
+-inline int g_isnan(float  f) { return isnanf(f); }
++inline int g_isnan(float  f) { return __isnanf(f); }
+ inline int g_isnan(double f) { return isnan(f); }
+ #else
+ #error "missing platform-specific definition here"

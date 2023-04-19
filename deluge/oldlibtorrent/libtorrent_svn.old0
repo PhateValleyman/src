@@ -1,0 +1,1260 @@
+nohup: ignoring input
+Start point:2014-10-11 00:38:12
+A    libtorrent/test
+A    libtorrent/test/valgrind_suppressions.txt
+A    libtorrent/test/test_web_seed_socks4.cpp
+A    libtorrent/test/cb.xml
+A    libtorrent/test/test_web_seed_socks5.cpp
+A    libtorrent/test/eztv.xml
+A    libtorrent/test/test_rss.cpp
+A    libtorrent/test/test_buffer.cpp
+A    libtorrent/test/test_web_seed_socks5_pw.cpp
+A    libtorrent/test/test_web_seed.cpp
+A    libtorrent/test/test_dht.cpp
+A    libtorrent/test/test_upnp.cpp
+A    libtorrent/test/test_bitfield.cpp
+A    libtorrent/test/test_piece_picker.cpp
+A    libtorrent/test/utf8_test.txt
+A    libtorrent/test/enum_if.cpp
+A    libtorrent/test/test_auto_unchoke.cpp
+A    libtorrent/test/test.hpp
+A    libtorrent/test/socks.py
+A    libtorrent/test/test_bandwidth_limiter.cpp
+A    libtorrent/test/test_peer_priority.cpp
+A    libtorrent/test/web_seed_suite.hpp
+A    libtorrent/test/test_torrents
+A    libtorrent/test/test_torrents/invalid_name.torrent
+A    libtorrent/test/test_torrents/slash_path.torrent
+A    libtorrent/test/test_torrents/url_seed_multi_space.torrent
+A    libtorrent/test/test_torrents/single_multi_file.torrent
+A    libtorrent/test/test_torrents/invalid_root_hash.torrent
+A    libtorrent/test/test_torrents/no_creation_date.torrent
+A    libtorrent/test/test_torrents/invalid_path_list.torrent
+A    libtorrent/test/test_torrents/url_list.torrent
+A    libtorrent/test/test_torrents/empty_httpseed.torrent
+A    libtorrent/test/test_torrents/unaligned_pieces.torrent
+A    libtorrent/test/test_torrents/invalid_info.torrent
+A    libtorrent/test/test_torrents/url_seed.torrent
+A    libtorrent/test/test_torrents/pad_file.torrent
+A    libtorrent/test/test_torrents/string.torrent
+A    libtorrent/test/test_torrents/symlink1.torrent
+A    libtorrent/test/test_torrents/invalid_name2.torrent
+A    libtorrent/test/test_torrents/invalid_name3.torrent
+A    libtorrent/test/test_torrents/empty_path.torrent
+A    libtorrent/test/test_torrents/base.torrent
+A    libtorrent/test/test_torrents/url_seed_multi.torrent
+A    libtorrent/test/test_torrents/whitespace_url.torrent
+A    libtorrent/test/test_torrents/invalid_root_hash2.torrent
+A    libtorrent/test/test_torrents/url_seed_multi_space_nolist.torrent
+A    libtorrent/test/test_torrents/invalid_file_size.torrent
+A    libtorrent/test/test_torrents/missing_path_list.torrent
+A    libtorrent/test/test_torrents/empty_path_multi.torrent
+A    libtorrent/test/test_torrents/root_hash.torrent
+A    libtorrent/test/test_torrents/invalid_piece_len.torrent
+A    libtorrent/test/test_torrents/duplicate_web_seeds.torrent
+A    libtorrent/test/test_torrents/negative_file_size.torrent
+A    libtorrent/test/test_torrents/duplicate_files.torrent
+A    libtorrent/test/test_torrents/negative_size.torrent
+A    libtorrent/test/test_torrents/long_name.torrent
+A    libtorrent/test/test_torrents/creation_date.torrent
+A    libtorrent/test/test_torrents/parent_path.torrent
+A    libtorrent/test/test_torrents/negative_piece_len.torrent
+A    libtorrent/test/test_torrents/backslash_path.torrent
+A    libtorrent/test/test_torrents/no_name.torrent
+A    libtorrent/test/test_torrents/missing_piece_len.torrent
+A    libtorrent/test/test_torrents/invalid_pieces.torrent
+A    libtorrent/test/test_torrents/url_list2.torrent
+A    libtorrent/test/test_torrents/hidden_parent_path.torrent
+A    libtorrent/test/test_torrents/httpseed.torrent
+A    libtorrent/test/test_torrents/url_list3.torrent
+A    libtorrent/test/udp_tracker.cpp
+A    libtorrent/test/test_string.cpp
+A    libtorrent/test/dht_server.cpp
+A    libtorrent/test/test_bdecode_performance.cpp
+A    libtorrent/test/test_gzip.cpp
+A    libtorrent/test/test_hasher.cpp
+A    libtorrent/test/setup_transfer.hpp
+A    libtorrent/test/pb.xml
+A    libtorrent/test/test_sliding_average.cpp
+A    libtorrent/test/root1.xml
+A    libtorrent/test/root2.xml
+A    libtorrent/test/test_remap_files.cpp
+A    libtorrent/test/vsinstr_excludes.rsp
+A    libtorrent/test/peer_server.hpp
+A    libtorrent/test/test_pex.cpp
+A    libtorrent/test/test_web_seed_redirect.cpp
+A    libtorrent/test/test_http_connection.cpp
+A    libtorrent/test/test_time.cpp
+A    libtorrent/test/test_xml.cpp
+A    libtorrent/test/test_packet_buffer.cpp
+A    libtorrent/test/upnp.xml
+A    libtorrent/test/test_ssl.cpp
+A    libtorrent/test/test_pe_crypto.cpp
+A    libtorrent/test/test_torrent_info.cpp
+A    libtorrent/test/test_trackers_extension.cpp
+A    libtorrent/test/test_checking.cpp
+A    libtorrent/test/test_magnet.cpp
+A    libtorrent/test/test_web_seed_http.cpp
+A    libtorrent/test/test_metadata_extension.cpp
+A    libtorrent/test/test_web_seed_chunked.cpp
+A    libtorrent/test/test_file.cpp
+A    libtorrent/test/test_priority.cpp
+A    libtorrent/test/test_web_seed_http_pw.cpp
+A    libtorrent/test/main.cpp
+A    libtorrent/test/test_utf8.cpp
+A    libtorrent/test/http.py
+A    libtorrent/test/web_seed_suite.cpp
+A    libtorrent/test/test_torrent_parse.cpp
+A    libtorrent/test/Jamfile
+A    libtorrent/test/mn.xml
+A    libtorrent/test/test_swarm.cpp
+A    libtorrent/test/test_threads.cpp
+A    libtorrent/test/test_http_parser.cpp
+A    libtorrent/test/test_web_seed_ban.cpp
+A    libtorrent/test/test_natpmp.cpp
+A    libtorrent/test/test_url_seed.cpp
+A    libtorrent/test/test_file_storage.cpp
+A    libtorrent/test/test_storage.cpp
+A    libtorrent/test/setup_transfer.cpp
+A    libtorrent/test/zeroes.gz
+A    libtorrent/test/test_utp.cpp
+A    libtorrent/test/udp_tracker.hpp
+A    libtorrent/test/web_server.py
+A    libtorrent/test/fg.xml
+A    libtorrent/test/dht_server.hpp
+A    libtorrent/test/test_privacy.cpp
+A    libtorrent/test/test_ip_filter.cpp
+A    libtorrent/test/test_socket_io.cpp
+A    libtorrent/test/test_read_piece.cpp
+A    libtorrent/test/ssl
+A    libtorrent/test/ssl/dhparams.pem
+A    libtorrent/test/ssl/root_ca_private.pem
+A    libtorrent/test/ssl/invalid_peer_certificate.pem
+A    libtorrent/test/ssl/invalid_peer_private_key.pem
+A    libtorrent/test/ssl/root_ca_cert.pem
+A    libtorrent/test/ssl/cert_request.pem
+A    libtorrent/test/ssl/server.pem
+A    libtorrent/test/ssl/peer_certificate.pem
+A    libtorrent/test/ssl/peer_private_key.pem
+A    libtorrent/test/test_lsd.cpp
+A    libtorrent/test/peer_server.cpp
+A    libtorrent/test/test_session.cpp
+A    libtorrent/test/test_transfer.cpp
+A    libtorrent/test/test_bencoding.cpp
+A    libtorrent/test/Makefile.am
+A    libtorrent/test/test_fast_extension.cpp
+A    libtorrent/test/test_primitives.cpp
+A    libtorrent/test/test_tracker.cpp
+A    libtorrent/test/test_coverage_win.bat
+A    libtorrent/test/test_torrent.cpp
+A    libtorrent/test/kat.xml
+A    libtorrent/autotool.sh
+A    libtorrent/m4
+A    libtorrent/m4/ax_boost_system.m4
+A    libtorrent/m4/config.rpath
+A    libtorrent/m4/pkgconfig.m4
+A    libtorrent/m4/ax_boost_base.m4
+A    libtorrent/m4/ax_check_geoip.m4
+A    libtorrent/m4/ax_check_openssl.m4
+A    libtorrent/m4/ax_python_devel.m4
+A    libtorrent/m4/gettext-lib.m4
+A    libtorrent/m4/iconv.m4
+A    libtorrent/m4/ax_boost_python.m4
+A    libtorrent/m4/ax_pthread.m4
+A    libtorrent/Jamroot.jam
+A    libtorrent/LICENSE
+A    libtorrent/include
+A    libtorrent/include/libtorrent
+A    libtorrent/include/libtorrent/error.hpp
+A    libtorrent/include/libtorrent/xml_parse.hpp
+A    libtorrent/include/libtorrent/tommath_class.h
+A    libtorrent/include/libtorrent/ed25519.hpp
+A    libtorrent/include/libtorrent/bt_peer_connection.hpp
+A    libtorrent/include/libtorrent/bencode.hpp
+A    libtorrent/include/libtorrent/extensions.hpp
+A    libtorrent/include/libtorrent/assert.hpp
+A    libtorrent/include/libtorrent/bandwidth_limit.hpp
+A    libtorrent/include/libtorrent/i2p_stream.hpp
+A    libtorrent/include/libtorrent/web_peer_connection.hpp
+A    libtorrent/include/libtorrent/file_pool.hpp
+A    libtorrent/include/libtorrent/proxy_base.hpp
+A    libtorrent/include/libtorrent/ssl_stream.hpp
+A    libtorrent/include/libtorrent/bandwidth_socket.hpp
+A    libtorrent/include/libtorrent/disk_buffer_pool.hpp
+A    libtorrent/include/libtorrent/ip_filter.hpp
+A    libtorrent/include/libtorrent/alert_dispatcher.hpp
+A    libtorrent/include/libtorrent/socket_io.hpp
+A    libtorrent/include/libtorrent/allocator.hpp
+A    libtorrent/include/libtorrent/disk_buffer_holder.hpp
+A    libtorrent/include/libtorrent/random.hpp
+A    libtorrent/include/libtorrent/kademlia
+A    libtorrent/include/libtorrent/kademlia/dht_tracker.hpp
+A    libtorrent/include/libtorrent/kademlia/get_item.hpp
+A    libtorrent/include/libtorrent/kademlia/item.hpp
+A    libtorrent/include/libtorrent/kademlia/refresh.hpp
+A    libtorrent/include/libtorrent/kademlia/routing_table.hpp
+A    libtorrent/include/libtorrent/kademlia/node_id.hpp
+A    libtorrent/include/libtorrent/kademlia/node_entry.hpp
+A    libtorrent/include/libtorrent/kademlia/find_data.hpp
+A    libtorrent/include/libtorrent/kademlia/traversal_algorithm.hpp
+A    libtorrent/include/libtorrent/kademlia/get_peers.hpp
+A    libtorrent/include/libtorrent/kademlia/rpc_manager.hpp
+A    libtorrent/include/libtorrent/kademlia/node.hpp
+A    libtorrent/include/libtorrent/kademlia/dht_observer.hpp
+A    libtorrent/include/libtorrent/kademlia/logging.hpp
+A    libtorrent/include/libtorrent/kademlia/msg.hpp
+A    libtorrent/include/libtorrent/kademlia/observer.hpp
+A    libtorrent/include/libtorrent/bitfield.hpp
+A    libtorrent/include/libtorrent/piece_picker.hpp
+A    libtorrent/include/libtorrent/udp_tracker_connection.hpp
+A    libtorrent/include/libtorrent/upnp.hpp
+A    libtorrent/include/libtorrent/error_code.hpp
+A    libtorrent/include/libtorrent/sliding_average.hpp
+A    libtorrent/include/libtorrent/version.hpp
+A    libtorrent/include/libtorrent/ip_voter.hpp
+A    libtorrent/include/libtorrent/union_endpoint.hpp
+A    libtorrent/include/libtorrent/socket.hpp
+A    libtorrent/include/libtorrent/invariant_check.hpp
+A    libtorrent/include/libtorrent/socket_type.hpp
+A    libtorrent/include/libtorrent/http_stream.hpp
+A    libtorrent/include/libtorrent/bandwidth_manager.hpp
+A    libtorrent/include/libtorrent/http_connection.hpp
+A    libtorrent/include/libtorrent/http_seed_connection.hpp
+A    libtorrent/include/libtorrent/sha1_hash.hpp
+A    libtorrent/include/libtorrent/natpmp.hpp
+A    libtorrent/include/libtorrent/copy_ptr.hpp
+A    libtorrent/include/libtorrent/ConvertUTF.h
+A    libtorrent/include/libtorrent/udp_socket.hpp
+A    libtorrent/include/libtorrent/instantiate_connection.hpp
+A    libtorrent/include/libtorrent/intrusive_ptr_base.hpp
+A    libtorrent/include/libtorrent/io.hpp
+A    libtorrent/include/libtorrent/disk_io_thread.hpp
+A    libtorrent/include/libtorrent/gzip.hpp
+A    libtorrent/include/libtorrent/utp_socket_manager.hpp
+A    libtorrent/include/libtorrent/stat.hpp
+A    libtorrent/include/libtorrent/ptime.hpp
+A    libtorrent/include/libtorrent/piece_block_progress.hpp
+A    libtorrent/include/libtorrent/build_config.hpp
+A    libtorrent/include/libtorrent/address.hpp
+A    libtorrent/include/libtorrent/web_connection_base.hpp
+A    libtorrent/include/libtorrent/debug.hpp
+A    libtorrent/include/libtorrent/socket_type_fwd.hpp
+A    libtorrent/include/libtorrent/bandwidth_queue_entry.hpp
+A    libtorrent/include/libtorrent/peer.hpp
+A    libtorrent/include/libtorrent/alert_types.hpp
+A    libtorrent/include/libtorrent/http_parser.hpp
+A    libtorrent/include/libtorrent/time.hpp
+A    libtorrent/include/libtorrent/settings.hpp
+A    libtorrent/include/libtorrent/alert_manager.hpp
+A    libtorrent/include/libtorrent/GeoIP.h
+A    libtorrent/include/libtorrent/session_settings.hpp
+A    libtorrent/include/libtorrent/storage.hpp
+A    libtorrent/include/libtorrent/aux_
+A    libtorrent/include/libtorrent/aux_/session_impl.hpp
+A    libtorrent/include/libtorrent/alert.hpp
+A    libtorrent/include/libtorrent/peer_id.hpp
+A    libtorrent/include/libtorrent/thread.hpp
+A    libtorrent/include/libtorrent/add_torrent_params.hpp
+A    libtorrent/include/libtorrent/torrent_info.hpp
+A    libtorrent/include/libtorrent/extensions
+A    libtorrent/include/libtorrent/extensions/lt_trackers.hpp
+A    libtorrent/include/libtorrent/extensions/logger.hpp
+A    libtorrent/include/libtorrent/extensions/metadata_transfer.hpp
+A    libtorrent/include/libtorrent/extensions/ut_pex.hpp
+A    libtorrent/include/libtorrent/extensions/smart_ban.hpp
+A    libtorrent/include/libtorrent/extensions/ut_metadata.hpp
+A    libtorrent/include/libtorrent/buffer.hpp
+A    libtorrent/include/libtorrent/tommath.h
+A    libtorrent/include/libtorrent/enum_net.hpp
+A    libtorrent/include/libtorrent/size_type.hpp
+A    libtorrent/include/libtorrent/bloom_filter.hpp
+A    libtorrent/include/libtorrent/file.hpp
+A    libtorrent/include/libtorrent/create_torrent.hpp
+A    libtorrent/include/libtorrent/lsd.hpp
+A    libtorrent/include/libtorrent/socks5_stream.hpp
+A    libtorrent/include/libtorrent/session.hpp
+A    libtorrent/include/libtorrent/utp_stream.hpp
+A    libtorrent/include/libtorrent/timestamp_history.hpp
+A    libtorrent/include/libtorrent/max.hpp
+A    libtorrent/include/libtorrent/tracker_manager.hpp
+A    libtorrent/include/libtorrent/escape_string.hpp
+A    libtorrent/include/libtorrent/utf8.hpp
+A    libtorrent/include/libtorrent/io_service.hpp
+A    libtorrent/include/libtorrent/fingerprint.hpp
+A    libtorrent/include/libtorrent/magnet_uri.hpp
+A    libtorrent/include/libtorrent/alloca.hpp
+A    libtorrent/include/libtorrent/parse_url.hpp
+A    libtorrent/include/libtorrent/torrent.hpp
+A    libtorrent/include/libtorrent/policy.hpp
+A    libtorrent/include/libtorrent/lazy_entry.hpp
+A    libtorrent/include/libtorrent/packet_buffer.hpp
+A    libtorrent/include/libtorrent/puff.hpp
+A    libtorrent/include/libtorrent/entry.hpp
+A    libtorrent/include/libtorrent/file_storage.hpp
+A    libtorrent/include/libtorrent/connection_queue.hpp
+A    libtorrent/include/libtorrent/peer_request.hpp
+A    libtorrent/include/libtorrent/string_util.hpp
+A    libtorrent/include/libtorrent/pe_crypto.hpp
+A    libtorrent/include/libtorrent/config.hpp
+A    libtorrent/include/libtorrent/deadline_timer.hpp
+A    libtorrent/include/libtorrent/storage_defs.hpp
+A    libtorrent/include/libtorrent/peer_info.hpp
+A    libtorrent/include/libtorrent/rss.hpp
+A    libtorrent/include/libtorrent/torrent_handle.hpp
+A    libtorrent/include/libtorrent/identify_client.hpp
+A    libtorrent/include/libtorrent/http_tracker_connection.hpp
+A    libtorrent/include/libtorrent/hasher.hpp
+A    libtorrent/include/libtorrent/broadcast_socket.hpp
+A    libtorrent/include/libtorrent/peer_connection.hpp
+A    libtorrent/include/libtorrent/tommath_superclass.h
+A    libtorrent/include/libtorrent/export.hpp
+A    libtorrent/include/libtorrent/Makefile.am
+A    libtorrent/include/libtorrent/chained_buffer.hpp
+A    libtorrent/include/libtorrent/session_status.hpp
+A    libtorrent/include/libtorrent/io_service_fwd.hpp
+A    libtorrent/list_files.py
+A    libtorrent/AUTHORS
+A    libtorrent/darwin_valgrind.suppressions
+A    libtorrent/bootstrap.sh
+A    libtorrent/src
+A    libtorrent/src/time.cpp
+A    libtorrent/src/settings.cpp
+A    libtorrent/src/alert_manager.cpp
+A    libtorrent/src/storage.cpp
+A    libtorrent/src/thread.cpp
+A    libtorrent/src/alert.cpp
+A    libtorrent/src/torrent_info.cpp
+A    libtorrent/src/enum_net.cpp
+A    libtorrent/src/bloom_filter.cpp
+A    libtorrent/src/file.cpp
+A    libtorrent/src/create_torrent.cpp
+A    libtorrent/src/socks5_stream.cpp
+A    libtorrent/src/lsd.cpp
+A    libtorrent/src/utp_stream.cpp
+A    libtorrent/src/session.cpp
+A    libtorrent/src/timestamp_history.cpp
+A    libtorrent/src/tracker_manager.cpp
+A    libtorrent/src/kademlia
+A    libtorrent/src/kademlia/item.cpp
+A    libtorrent/src/kademlia/refresh.cpp
+A    libtorrent/src/kademlia/routing_table.cpp
+A    libtorrent/src/kademlia/rpc_manager.cpp
+A    libtorrent/src/kademlia/node_id.cpp
+A    libtorrent/src/kademlia/node.cpp
+A    libtorrent/src/kademlia/logging.cpp
+A    libtorrent/src/kademlia/find_data.cpp
+A    libtorrent/src/kademlia/traversal_algorithm.cpp
+A    libtorrent/src/kademlia/dht_tracker.cpp
+A    libtorrent/src/kademlia/get_item.cpp
+A    libtorrent/src/kademlia/get_peers.cpp
+A    libtorrent/src/escape_string.cpp
+A    libtorrent/src/utf8.cpp
+A    libtorrent/src/ut_metadata.cpp
+A    libtorrent/src/magnet_uri.cpp
+A    libtorrent/src/sha1.cpp
+A    libtorrent/src/parse_url.cpp
+A    libtorrent/src/torrent.cpp
+A    libtorrent/src/policy.cpp
+A    libtorrent/src/puff.cpp
+A    libtorrent/src/packet_buffer.cpp
+A    libtorrent/src/entry.cpp
+A    libtorrent/src/connection_queue.cpp
+A    libtorrent/src/file_storage.cpp
+A    libtorrent/src/string_util.cpp
+A    libtorrent/src/pe_crypto.cpp
+A    libtorrent/src/rss.cpp
+A    libtorrent/src/torrent_handle.cpp
+A    libtorrent/src/http_tracker_connection.cpp
+A    libtorrent/src/identify_client.cpp
+A    libtorrent/src/hasher.cpp
+A    libtorrent/src/broadcast_socket.cpp
+A    libtorrent/src/peer_connection.cpp
+A    libtorrent/src/chained_buffer.cpp
+A    libtorrent/src/xml_parse.cpp
+A    libtorrent/src/ConvertUTF.cpp
+A    libtorrent/src/bt_peer_connection.cpp
+A    libtorrent/src/assert.cpp
+A    libtorrent/src/bandwidth_limit.cpp
+A    libtorrent/src/GeoIP.c
+A    libtorrent/src/session_impl.cpp
+A    libtorrent/src/i2p_stream.cpp
+A    libtorrent/src/smart_ban.cpp
+A    libtorrent/src/web_peer_connection.cpp
+A    libtorrent/src/file_pool.cpp
+A    libtorrent/src/disk_buffer_pool.cpp
+A    libtorrent/src/asio_ssl.cpp
+A    libtorrent/src/ip_filter.cpp
+A    libtorrent/src/lt_trackers.cpp
+A    libtorrent/src/socket_io.cpp
+A    libtorrent/src/disk_buffer_holder.cpp
+A    libtorrent/src/allocator.cpp
+A    libtorrent/src/random.cpp
+A    libtorrent/src/upnp.cpp
+A    libtorrent/src/udp_tracker_connection.cpp
+A    libtorrent/src/piece_picker.cpp
+A    libtorrent/src/error_code.cpp
+A    libtorrent/src/metadata_transfer.cpp
+A    libtorrent/src/lazy_bdecode.cpp
+A    libtorrent/src/mpi.c
+A    libtorrent/src/ip_voter.cpp
+A    libtorrent/src/socket_type.cpp
+A    libtorrent/src/http_stream.cpp
+A    libtorrent/src/asio.cpp
+A    libtorrent/src/http_seed_connection.cpp
+A    libtorrent/src/bandwidth_manager.cpp
+A    libtorrent/src/http_connection.cpp
+A    libtorrent/src/natpmp.cpp
+A    libtorrent/src/udp_socket.cpp
+A    libtorrent/src/instantiate_connection.cpp
+A    libtorrent/src/ut_pex.cpp
+A    libtorrent/src/disk_io_thread.cpp
+A    libtorrent/src/gzip.cpp
+A    libtorrent/src/utp_socket_manager.cpp
+A    libtorrent/src/stat.cpp
+A    libtorrent/src/logger.cpp
+A    libtorrent/src/web_connection_base.cpp
+A    libtorrent/src/Makefile.am
+A    libtorrent/src/bandwidth_queue_entry.cpp
+A    libtorrent/src/http_parser.cpp
+A    libtorrent/set_version.py
+A    libtorrent/ChangeLog
+A    libtorrent/docs
+A    libtorrent/docs/dht_sec.rst
+A    libtorrent/docs/session_stats_peers.png
+A    libtorrent/docs/reference-Session.html
+A    libtorrent/docs/reference-Filter.html
+A    libtorrent/docs/client_test.rst
+A    libtorrent/docs/storage.png
+A    libtorrent/docs/stylesheet
+A    libtorrent/docs/troubleshooting.html
+A    libtorrent/docs/disk_access_no_elevator.png
+A    libtorrent/docs/disk_buffer_before_optimization.png
+A    libtorrent/docs/rst.css
+A    libtorrent/docs/reference-Settings.html
+A    libtorrent/docs/our_delay_base_thumb.png
+A    libtorrent/docs/extension_protocol.html
+A    libtorrent/docs/projects.rst
+A    libtorrent/docs/dht_extensions.html
+A    libtorrent/docs/delays_thumb.png
+A    libtorrent/docs/reference-Storage.html
+A    libtorrent/docs/building.rst
+A    libtorrent/docs/running_tests.html
+A    libtorrent/docs/disk_buffer.png
+A    libtorrent/docs/img
+A    libtorrent/docs/img/minus.gif
+A    libtorrent/docs/img/dotline.gif
+A    libtorrent/docs/img/logo.png
+A    libtorrent/docs/img/bg.png
+A    libtorrent/docs/img/blue_top.png
+A    libtorrent/docs/img/blue_bottom.png
+A    libtorrent/docs/img/orange.png
+A    libtorrent/docs/dht_sec.html
+A    libtorrent/docs/troubleshooting.dot
+A    libtorrent/docs/dht_rss.rst
+A    libtorrent/docs/index.rst
+A    libtorrent/docs/contributing.rst
+A    libtorrent/docs/client_test.html
+A    libtorrent/docs/python_binding.rst
+A    libtorrent/docs/write_disk_buffers.diagram
+A    libtorrent/docs/read_disk_buffers.png
+A    libtorrent/docs/examples.rst
+A    libtorrent/docs/features.rst
+A    libtorrent/docs/make_thumb.sh
+A    libtorrent/docs/manual-ref.html
+A    libtorrent/docs/projects.html
+A    libtorrent/docs/reference-Custom_Storage.html
+A    libtorrent/docs/troubleshooting.rst
+A    libtorrent/docs/dht_store.html
+A    libtorrent/docs/complete_bit_prefixes.png
+A    libtorrent/docs/building.html
+A    libtorrent/docs/hash_distribution.png
+A    libtorrent/docs/storage.diagram
+A    libtorrent/docs/hacking.diagram
+A    libtorrent/docs/hacking.html
+A    libtorrent/docs/todo.html
+A    libtorrent/docs/troubleshooting_thumb.png
+A    libtorrent/docs/utp.html
+A    libtorrent/docs/hacking.rst
+A    libtorrent/docs/makefile
+A    libtorrent/docs/cwnd.png
+A    libtorrent/docs/utp.rst
+A    libtorrent/docs/reference-Plugins.html
+A    libtorrent/docs/ip_id_v4.png
+A    libtorrent/docs/merkle_tree.png
+A    libtorrent/docs/ip_id_v6.png
+A    libtorrent/docs/ziptorrent_thumb.gif
+A    libtorrent/docs/udp_tracker_protocol.html
+A    libtorrent/docs/style.css
+A    libtorrent/docs/reference-Core.html
+A    libtorrent/docs/template.txt
+A    libtorrent/docs/reference-Alerts.html
+A    libtorrent/docs/udp_tracker_protocol.rst
+A    libtorrent/docs/reference-Time.html
+A    libtorrent/docs/disk_access.png
+A    libtorrent/docs/disk_access_elevator.png
+A    libtorrent/docs/our_delay_base.png
+A    libtorrent/docs/client_test.png
+A    libtorrent/docs/base.css
+A    libtorrent/docs/reference.html
+A    libtorrent/docs/dht_store.rst
+A    libtorrent/docs/merkle_tree.graffle
+A    libtorrent/docs/gen_reference_doc.py
+A    libtorrent/docs/read_disk_buffers.diagram
+A    libtorrent/docs/delays.png
+A    libtorrent/docs/dht_extensions.rst
+A    libtorrent/docs/reference-RSS.html
+A    libtorrent/docs/dht_rss.html
+A    libtorrent/docs/features.html
+A    libtorrent/docs/examples.html
+A    libtorrent/docs/im_thumb.jpg
+A    libtorrent/docs/manual.rst
+A    libtorrent/docs/gen_todo.py
+A    libtorrent/docs/reference-Bencoding.html
+A    libtorrent/docs/streaming.rst
+A    libtorrent/docs/utp_stack.diagram
+A    libtorrent/docs/reference-Create_Torrents.html
+A    libtorrent/docs/reference-Utility.html
+A    libtorrent/docs/write_disk_buffers.png
+A    libtorrent/docs/disk_io.png
+A    libtorrent/docs/extension_protocol.rst
+A    libtorrent/docs/reference-Error_Codes.html
+A    libtorrent/docs/reference-String.html
+A    libtorrent/docs/disk_buffer_sample.png
+A    libtorrent/docs/tuning.html
+A    libtorrent/docs/index.html
+A    libtorrent/docs/contributing.html
+A    libtorrent/docs/troubleshooting.png
+A    libtorrent/docs/template2.txt
+A    libtorrent/docs/tuning.rst
+A    libtorrent/docs/cwnd_thumb.png
+A    libtorrent/docs/python_binding.html
+A    libtorrent/libtorrent-rasterbar-cmake.pc.in
+A    libtorrent/build_dist.sh
+A    libtorrent/bindings
+A    libtorrent/bindings/python
+A    libtorrent/bindings/python/rss_reader.py
+A    libtorrent/bindings/python/make_torrent.py
+A    libtorrent/bindings/python/client.py
+A    libtorrent/bindings/python/Jamfile
+A    libtorrent/bindings/python/setup.py
+A    libtorrent/bindings/python/src
+A    libtorrent/bindings/python/src/torrent_status.cpp
+A    libtorrent/bindings/python/src/entry.cpp
+A    libtorrent/bindings/python/src/utility.cpp
+A    libtorrent/bindings/python/src/session_settings.cpp
+A    libtorrent/bindings/python/src/string.cpp
+A    libtorrent/bindings/python/src/peer_info.cpp
+A    libtorrent/bindings/python/src/alert.cpp
+A    libtorrent/bindings/python/src/torrent_info.cpp
+A    libtorrent/bindings/python/src/torrent_handle.cpp
+A    libtorrent/bindings/python/src/big_number.cpp
+A    libtorrent/bindings/python/src/ip_filter.cpp
+A    libtorrent/bindings/python/src/create_torrent.cpp
+A    libtorrent/bindings/python/src/gil.hpp
+A    libtorrent/bindings/python/src/error_code.cpp
+A    libtorrent/bindings/python/src/session.cpp
+A    libtorrent/bindings/python/src/module.cpp
+A    libtorrent/bindings/python/src/version.cpp
+A    libtorrent/bindings/python/src/fingerprint.cpp
+A    libtorrent/bindings/python/src/optional.hpp
+A    libtorrent/bindings/python/src/magnet_uri.cpp
+A    libtorrent/bindings/python/src/converters.cpp
+A    libtorrent/bindings/python/src/bytes.hpp
+A    libtorrent/bindings/python/src/datetime.cpp
+A    libtorrent/bindings/python/Makefile.am
+A    libtorrent/bindings/python/compile_flags.in
+A    libtorrent/bindings/python/link_flags.in
+A    libtorrent/bindings/python/simple_client.py
+A    libtorrent/bindings/c
+A    libtorrent/bindings/c/library.cpp
+A    libtorrent/bindings/c/Jamfile
+A    libtorrent/bindings/c/simple_client.c
+A    libtorrent/bindings/c/libtorrent.h
+A    libtorrent/bindings/Makefile.am
+A    libtorrent/bindings/README.txt
+A    libtorrent/README
+A    libtorrent/.regression.yml
+A    libtorrent/ed25519
+A    libtorrent/ed25519/test.c
+A    libtorrent/ed25519/src
+A    libtorrent/ed25519/src/fe.h
+A    libtorrent/ed25519/src/ge.h
+A    libtorrent/ed25519/src/sign.cpp
+A    libtorrent/ed25519/src/precomp_data.h
+A    libtorrent/ed25519/src/sha512.cpp
+A    libtorrent/ed25519/src/keypair.cpp
+A    libtorrent/ed25519/src/verify.cpp
+A    libtorrent/ed25519/src/sc.cpp
+A    libtorrent/ed25519/src/sha512.h
+A    libtorrent/ed25519/src/sc.h
+A    libtorrent/ed25519/src/add_scalar.cpp
+A    libtorrent/ed25519/src/fixedint.h
+A    libtorrent/ed25519/src/seed.cpp
+A    libtorrent/ed25519/src/fe.cpp
+A    libtorrent/ed25519/src/key_exchange.cpp
+A    libtorrent/ed25519/src/ge.cpp
+A    libtorrent/ed25519/readme.md
+A    libtorrent/tools
+A    libtorrent/tools/parse_test_results.py
+A    libtorrent/tools/parse_session_stats.py
+A    libtorrent/tools/parse_bandwidth_log.py
+A    libtorrent/tools/dht_put.cpp
+A    libtorrent/tools/dht_flood.py
+A    libtorrent/tools/parse_dht_rtt.py
+A    libtorrent/tools/parse_utp_log.py
+A    libtorrent/tools/parse_memory_log.py
+A    libtorrent/tools/parse_buffer_log.py
+A    libtorrent/tools/parse_disk_access.py
+A    libtorrent/tools/gprof2dot.py
+A    libtorrent/tools/parse_dht_log.py
+A    libtorrent/tools/parse_sample.py
+A    libtorrent/tools/parse_request_log.cpp
+A    libtorrent/tools/run_benchmark.py
+A    libtorrent/tools/parse_disk_buffer_log.py
+A    libtorrent/tools/Jamfile
+A    libtorrent/tools/clean.py
+A    libtorrent/tools/Makefile.am
+A    libtorrent/tools/parse_hash_fails.cpp
+A    libtorrent/tools/parse_disk_log.py
+A    libtorrent/tools/parse_peer_log.py
+A    libtorrent/tools/run_regression_tests.py
+A    libtorrent/tools/run_tests.py
+A    libtorrent/tools/parse_dht_stats.py
+A    libtorrent/update_copyright.py
+A    libtorrent/configure.ac
+A    libtorrent/Jamfile
+A    libtorrent/COPYING
+A    libtorrent/sanity-checker.xml
+A    libtorrent/Makefile.am
+A    libtorrent/NEWS
+A    libtorrent/CMakeLists.txt
+A    libtorrent/libtorrent-rasterbar.pc.in
+A    libtorrent/examples
+A    libtorrent/examples/upnp_test.cpp
+A    libtorrent/examples/dump_torrent.cpp
+A    libtorrent/examples/connection_tester.cpp
+A    libtorrent/examples/Jamfile
+A    libtorrent/examples/run_benchmarks.py
+A    libtorrent/examples/simple_client.cpp
+A    libtorrent/examples/Makefile.am
+A    libtorrent/examples/rss_reader.cpp
+A    libtorrent/examples/make_torrent.cpp
+A    libtorrent/examples/client_test.cpp
+ U   libtorrent
+Checked out revision 10378.
+
+[1mBootstrapping autotools for libtorrent-rasterbar
+(B[m
+[1mChecking autotools requirements:
+(B[m
+[1mChecking for autoconf >= 2.63...
+(B[m  testing autoconf... found 2.69
+[1mChecking for automake >= 1.11...
+(B[m  testing automake... found 1.14.1
+[1mChecking for libtool >= 2.2.6...
+(B[m  testing libtoolize... found 2.4.2
+Copying m4/config.rpath to build-aux
+
+[1mProcessing configure.ac
+(B[m
+[1mRunning libtoolize...
+(B[mlibtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, `build-aux'.
+libtoolize: copying file `build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+[1mRunning aclocal...
+(B[mconfigure.ac:125: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:125: the top level
+configure.ac:451: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:451: the top level
+configure.ac:538: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:538: the top level
+configure.ac:125: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:125: the top level
+configure.ac:451: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:451: the top level
+configure.ac:538: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:538: the top level
+[1mRunning autoconf...
+(B[mconfigure.ac:125: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:125: the top level
+configure.ac:451: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:451: the top level
+configure.ac:538: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:538: the top level
+[1mRunning automake...
+(B[mconfigure.ac:125: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:125: the top level
+configure.ac:451: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:451: the top level
+configure.ac:538: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2590: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2606: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:639: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2031: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2052: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:550: AS_CASE is expanded from...
+configure.ac:538: the top level
+configure.ac:66: installing 'build-aux/compile'
+configure.ac:75: installing 'build-aux/config.guess'
+configure.ac:75: installing 'build-aux/config.sub'
+configure.ac:81: installing 'build-aux/install-sh'
+configure.ac:81: installing 'build-aux/missing'
+examples/Makefile.am: installing 'build-aux/depcomp'
+parallel-tests: installing 'build-aux/test-driver'
+
+[1mBootstrap complete, now run `configure'.
+(B[mchecking whether make supports nested variables... yes
+
+Building libtorrent-rasterbar 1.0.2
+
+Checking for a C/C++ compiler to use:
+checking for arm-ffp-linux-uclibcgnueabi-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking whether gcc and cc understand -c and -o together... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking whether g++ understands -c and -o together... yes
+
+Checking system type:
+checking build system type... arm-ffp-linux-uclibcgnueabi
+checking host system type... arm-ffp-linux-uclibcgnueabi
+checking target system type... arm-ffp-linux-uclibcgnueabi
+
+Initializing Automake:
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking dependency style of g++... gcc3
+
+Initializing Libtool:
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert arm-ffp-linux-uclibcgnueabi file names to arm-ffp-linux-uclibcgnueabi format... func_convert_file_noop
+checking how to convert arm-ffp-linux-uclibcgnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for arm-ffp-linux-uclibcgnueabi-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for arm-ffp-linux-uclibcgnueabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-ffp-linux-uclibcgnueabi-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for arm-ffp-linux-uclibcgnueabi-strip... no
+checking for strip... strip
+checking for arm-ffp-linux-uclibcgnueabi-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for arm-ffp-linux-uclibcgnueabi-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+
+Checking for posix thread support:
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -lpthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking whether to check for GCC pthread/shared inconsistencies... yes
+checking whether -lpthread fixes that... yes
+Checking for visibility support:
+checking for __attribute__((visibility("hidden")))... found
+yes
+
+Checking for boost libraries:
+checking for boostlib >= 1.36... yes
+checking whether the Boost::System library is available... yes
+checking for exit in -lboost_system... yes
+
+Checking for pkg-config:
+checking for arm-ffp-linux-uclibcgnueabi-pkg-config... /ffp/bin/arm-ffp-linux-uclibcgnueabi-pkg-config
+checking pkg-config is at least version 0.20... yes
+
+Checking for functions and headers:
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for gethostbyname... yes
+checking for gethostbyname_r... yes
+checking for clock_gettime... yes
+
+Checking build options:
+checking whether deprecated functions should be enabled... yes
+checking whether debug build should be enabled... no
+checking whether invariant check should be enabled... no
+checking whether logging to disk should be enabled... no
+checking whether statistics logging should be enabled... no
+checking whether disk activity logging should be enabled... no
+
+Checking features to be enabled:
+checking whether encryption support should be enabled... yes
+configure: encryption support: now checking for the OpenSSL library...
+checking for openssl/ssl.h in /ffp... yes
+checking whether compiling and linking against OpenSSL works... yes
+checking whether geoip support should be enabled... yes
+checking whether dht support should be enabled... yes
+checking whether pool allocators should be enabled... yes
+
+Checking for extra build files:
+checking whether example files should be built... no
+checking whether test files should be built... no
+checking whether python bindings should be built... yes
+checking for a Python interpreter with version >= 2.4... python
+checking for python... /ffp/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/site-packages
+checking for python2.7... (cached) /ffp/bin/python
+checking for a version of Python >= '2.1.0'... yes
+checking for a version of Python >= '2.4'... yes
+checking for the distutils Python package... yes
+checking for Python include path... -I/ffp/include/python2.7
+checking for Python library path... -L/ffp/lib -lpython2.7
+checking for Python site-packages path... /ffp/lib/python2.7/site-packages
+checking python extra libraries...  -lpthread -ldl  -lutil
+checking consistency of all components of python development environment... yes
+checking whether the Boost::Python library is available... yes
+checking for main in -lboost_python... yes
+
+Checking for external libraries:
+checking for FIEMAP support... checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking for linux/fiemap.h... yes
+checking whether to link against system libgeoip... yes
+configure: libgeoip: now checking for the libgeoip library...
+checking for libgeoip with pkg-config... yes
+checking for GEOIP... yes
+checking whether to link against system libiconv... checking for shared library run path origin... done
+yes
+checking for iconv... yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+
+Generating Makefiles:
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating include/libtorrent/Makefile
+config.status: creating examples/Makefile
+config.status: creating test/Makefile
+config.status: creating tools/Makefile
+config.status: creating bindings/Makefile
+config.status: creating bindings/python/Makefile
+config.status: creating bindings/python/link_flags
+config.status: creating bindings/python/compile_flags
+config.status: creating libtorrent-rasterbar.pc
+config.status: creating libtorrent-rasterbar-cmake.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+Configure script has finished system check.
+
+   Config results:
+  -=-=-=-=-=-=-=-=-
+
+Package:
+  name:                 libtorrent-rasterbar
+  version:              1.0.2
+  svn revision:         10260
+
+Build environment:
+  build system:         arm-ffp-linux-uclibcgnueabi
+  host system:          arm-ffp-linux-uclibcgnueabi
+  target system:        arm-ffp-linux-uclibcgnueabi
+
+Compiler and linker flags:
+  CPPFlags:             -I/ffp/include -I/ffp/include -Wno-deprecated-declarations
+  CFlags:               -I/ffp/include/  -lpthread -march=armv5te -O3 -fvisibility=hidden
+  CXXFlags:             -march=armv5te -O3 -DBOOST_ASIO_DISABLE_EPOLL -ftemplate-depth=120 -fvisibility=hidden -fvisibility-inlines-hidden
+  LDFlags:              -L/ffp/lib -L/ffp/lib -fvisibility=hidden -fvisibility-inlines-hidden
+  Libs:                 -L/ffp/lib -liconv -R/ffp/lib -lGeoIP  -lpthread  
+  Defs:                 -DPACKAGE_NAME=\"libtorrent-rasterbar\" -DPACKAGE_TARNAME=\"libtorrent-rasterbar\" -DPACKAGE_VERSION=\"1.0.2\" -DPACKAGE_STRING=\"libtorrent-rasterbar\ 1.0.2\" -DPACKAGE_BUGREPORT=\"arvid@rasterbar.com\" -DPACKAGE_URL=\"http://www.libtorrent.org\" -DPACKAGE=\"libtorrent-rasterbar\" -DVERSION=\"1.0.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_PTHREAD=1 -DHAVE_BOOST=/\*\*/ -DHAVE_BOOST_SYSTEM=1 -D_FILE_OFFSET_BITS=64 -DHAVE_GETHOSTBYNAME=1 -DHAVE_GETHOSTBYNAME_R=1 -DGETHOSTBYNAME_R_RETURNS_INT=1 -DHAVE_CLOCK_GETTIME=1 -DNDEBUG=1 -DTORRENT_USE_OPENSSL=1 -DHAVE_PYTHON=\"2.7\" -DHAVE_BOOST_PYTHON=1 -DHAVE_LINUX_TYPES_H=1 -DHAVE_LINUX_FIEMAP_H=1 -DHAVE_ICONV=1 -DICONV_CONST= -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE=1 -DBOOST_ASIO_ENABLE_CANCELIO=1 -DBOOST_ASIO_DYN_LINK=1 -DTORRENT_BUILDING_SHARED=1
+
+Build options:
+  deprecated functions: yes
+  debug build:          no
+  invariant checks:     no
+  logging support:      no
+  statistics:           no
+  disk statistics:      no
+
+Features:
+  encryption support:   yes
+  geoip support:        yes
+  dht support:          yes
+  pool allocators:      yes
+
+Extra builds:
+  examples:             no
+  tests:                no
+  python bindings:      yes
+
+Pthread library:
+  CFlags:               -lpthread
+  Libs:                 -lpthread 
+
+Boost libraries:
+  version:              
+  CPPFlags:             -I/ffp/include
+  LDFlags:              -L/ffp/lib
+  boost.system:         -lboost_system
+  boost.python:         -lboost_python
+
+Python environment:
+  -automake-
+  binary:               /ffp/bin/python
+  version:              2.7
+  platform:             linux2
+  prefix:               ${prefix}
+  exec_prefix:          ${exec_prefix}
+  pythondir:            ${prefix}/lib/python2.7/site-packages
+  pkgpythondir:         ${pythondir}/libtorrent-rasterbar
+  pyexecdir:            ${exec_prefix}/lib/python2.7/site-packages
+  pkgpyexecdir:         ${pyexecdir}/libtorrent-rasterbar
+
+  -m4-
+  cppflags:             -I/ffp/include/python2.7
+  ldflags:              -L/ffp/lib -lpython2.7
+  extra libs:            -lpthread -ldl  -lutil
+
+
+External libraries:
+  system libgeoip:      yes
+  system libiconv:      yes
+
+GeoIP library:
+  GeoIP CFlags:         -I/ffp/include/ 
+  GeoIP Libs:           -lGeoIP 
+
+Iconv library:
+  Iconv Libs:           -L/ffp/lib -liconv -R/ffp/lib
+
+OpenSSL library:
+  OpenSSL Libs:         -lssl -lcrypto
+  OpenSSL LDFlags:      -L/ffp/lib
+  OpenSSL Includes:     -I/ffp/include
+
+Type 'make' to compile libtorrent-rasterbar 1.0.2
+or type 'make V=1' for verbose compiling
+and then 'make install' to install it into /ffp
+
+Making all in include/libtorrent
+make[1]: Entering directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/include/libtorrent'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/include/libtorrent'
+Making all in src
+make[1]: Entering directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/src'
+  CXX      web_connection_base.lo
+  CXX      alert.lo
+  CXX      alert_manager.lo
+  CXX      allocator.lo
+  CXX      asio.lo
+  CXX      assert.lo
+  CXX      bandwidth_limit.lo
+  CXX      bandwidth_manager.lo
+  CXX      bandwidth_queue_entry.lo
+  CXX      bloom_filter.lo
+  CXX      broadcast_socket.lo
+  CXX      bt_peer_connection.lo
+  CXX      chained_buffer.lo
+  CXX      connection_queue.lo
+  CXX      ConvertUTF.lo
+  CXX      create_torrent.lo
+  CXX      disk_buffer_holder.lo
+  CXX      disk_buffer_pool.lo
+  CXX      disk_io_thread.lo
+  CXX      entry.lo
+  CXX      enum_net.lo
+  CXX      error_code.lo
+  CXX      escape_string.lo
+  CXX      file.lo
+  CXX      file_pool.lo
+  CXX      file_storage.lo
+  CXX      gzip.lo
+  CXX      hasher.lo
+  CXX      http_connection.lo
+  CXX      http_parser.lo
+  CXX      http_seed_connection.lo
+  CXX      http_stream.lo
+  CXX      http_tracker_connection.lo
+  CXX      i2p_stream.lo
+  CXX      identify_client.lo
+  CXX      instantiate_connection.lo
+  CXX      ip_filter.lo
+  CXX      ip_voter.lo
+  CXX      lazy_bdecode.lo
+  CXX      logger.lo
+  CXX      lsd.lo
+  CXX      lt_trackers.lo
+  CXX      magnet_uri.lo
+  CXX      metadata_transfer.lo
+  CC       mpi.lo
+  CXX      natpmp.lo
+  CXX      parse_url.lo
+  CXX      pe_crypto.lo
+  CXX      peer_connection.lo
+  CXX      piece_picker.lo
+  CXX      packet_buffer.lo
+  CXX      policy.lo
+  CXX      puff.lo
+  CXX      random.lo
+  CXX      rss.lo
+  CXX      session.lo
+  CXX      session_impl.lo
+  CXX      settings.lo
+  CXX      sha1.lo
+  CXX      smart_ban.lo
+  CXX      socket_io.lo
+  CXX      socket_type.lo
+  CXX      socks5_stream.lo
+  CXX      stat.lo
+  CXX      storage.lo
+  CXX      string_util.lo
+  CXX      thread.lo
+  CXX      torrent.lo
+  CXX      torrent_handle.lo
+  CXX      torrent_info.lo
+  CXX      time.lo
+  CXX      timestamp_history.lo
+  CXX      tracker_manager.lo
+  CXX      udp_socket.lo
+  CXX      udp_tracker_connection.lo
+  CXX      upnp.lo
+  CXX      ut_metadata.lo
+  CXX      ut_pex.lo
+  CXX      utf8.lo
+  CXX      utp_socket_manager.lo
+  CXX      utp_stream.lo
+  CXX      web_peer_connection.lo
+  CXX      xml_parse.lo
+  CXX      kademlia/dht_tracker.lo
+  CXX      kademlia/find_data.lo
+  CXX      kademlia/node.lo
+  CXX      kademlia/node_id.lo
+  CXX      kademlia/refresh.lo
+  CXX      kademlia/routing_table.lo
+  CXX      kademlia/rpc_manager.lo
+  CXX      kademlia/logging.lo
+  CXX      kademlia/traversal_algorithm.lo
+  CXX      kademlia/get_peers.lo
+  CXX      kademlia/get_item.lo
+  CXX      kademlia/item.lo
+  CXX      ../ed25519/src/add_scalar.lo
+  CXX      ../ed25519/src/fe.lo
+  CXX      ../ed25519/src/ge.lo
+  CXX      ../ed25519/src/key_exchange.lo
+  CXX      ../ed25519/src/keypair.lo
+  CXX      ../ed25519/src/sc.lo
+  CXX      ../ed25519/src/seed.lo
+  CXX      ../ed25519/src/sha512.lo
+  CXX      ../ed25519/src/sign.lo
+  CXX      ../ed25519/src/verify.lo
+  CXX      asio_ssl.lo
+  CXXLD    libtorrent-rasterbar.la
+/ffp/lib/libGeoIP.so: warning: gethostbyname_r is obsolescent, use getnameinfo() instead.
+/ffp/lib/libcrypto.so: warning: gethostbyname is obsolescent, use getnameinfo() instead.
+make[1]: Leaving directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/src'
+Making all in examples
+make[1]: Entering directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/examples'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/examples'
+Making all in test
+make[1]: Entering directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/test'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/test'
+Making all in bindings
+make[1]: Entering directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/bindings'
+Making all in python
+make[2]: Entering directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/bindings/python'
+/ffp/bin/python setup.py build
+running build
+running build_ext
+building 'libtorrent' extension
+creating build
+creating build/temp.linux-armv5tel-2.7
+creating build/temp.linux-armv5tel-2.7/src
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/datetime.cpp -o build/temp.linux-armv5tel-2.7/src/datetime.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/torrent_info.cpp -o build/temp.linux-armv5tel-2.7/src/torrent_info.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+src/torrent_info.cpp:91:28: warning: 'libtorrent::file_storage::iterator {anonymous}::begin_files(libtorrent::torrent_info&)' defined but not used [-Wunused-function]
+     file_storage::iterator begin_files(torrent_info& i)
+                            ^
+src/torrent_info.cpp:96:28: warning: 'libtorrent::file_storage::iterator {anonymous}::end_files(libtorrent::torrent_info&)' defined but not used [-Wunused-function]
+     file_storage::iterator end_files(torrent_info& i)
+                            ^
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/session_settings.cpp -o build/temp.linux-armv5tel-2.7/src/session_settings.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/error_code.cpp -o build/temp.linux-armv5tel-2.7/src/error_code.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/big_number.cpp -o build/temp.linux-armv5tel-2.7/src/big_number.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/module.cpp -o build/temp.linux-armv5tel-2.7/src/module.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/ffp/include/ -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -Wno-deprecated-declarations -fPIC -I/ffp/include -I/ffp/include -I/ffp/include -I../../include -I/ffp/include/python2.7 -c src/alert.cpp -o build/temp.linux-armv5tel-2.7/src/alert.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+gcc: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <http://gcc.gnu.org/bugs.html> for instructions.
+error: command 'gcc' failed with exit status 4
+Makefile:511: recipe for target 'all-local' failed
+make[2]: *** [all-local] Error 1
+make[2]: Leaving directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/bindings/python'
+Makefile:388: recipe for target 'all-recursive' failed
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory '/i-data/7cf371c4/build/libtorrent-1.0.2_svn10378/bindings'
+Makefile:612: recipe for target 'all-recursive' failed
+make: *** [all-recursive] Error 1

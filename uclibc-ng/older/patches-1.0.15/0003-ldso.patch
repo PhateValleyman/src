@@ -1,0 +1,66 @@
+diff -rupN a/ldso/ldso/dl-elf.c b/ldso/ldso/dl-elf.c
+--- a/ldso/ldso/dl-elf.c	2016-05-29 10:19:36.000000000 +0300
++++ b/ldso/ldso/dl-elf.c	2016-06-17 11:02:28.000000000 +0300
+@@ -319,10 +319,9 @@ struct elf_resolve *_dl_load_shared_libr
+ 	   This list must exactly match the list in uClibc/ldso/util/ldd.c */
+ 	_dl_if_debug_dprint("\tsearching full lib path list\n");
+ 	tpnt1 = search_for_named_library(libname, rflags,
+-					UCLIBC_RUNTIME_PREFIX "lib:"
+-					UCLIBC_RUNTIME_PREFIX "usr/lib"
++					UCLIBC_RUNTIME_PREFIX "lib"
+ #ifndef __LDSO_CACHE_SUPPORT__
+-					":" UCLIBC_RUNTIME_PREFIX "usr/X11R6/lib"
++					":" UCLIBC_RUNTIME_PREFIX "X11R6/lib"
+ #endif
+ 					, rpnt, NULL);
+ 	if (tpnt1 != NULL)
+diff -rupN a/utils/ldconfig.c b/utils/ldconfig.c
+--- a/utils/ldconfig.c	2016-05-29 10:19:37.000000000 +0300
++++ b/utils/ldconfig.c	2016-06-17 11:20:53.000000000 +0300
+@@ -950,9 +950,8 @@ int main(int argc, char **argv)
+ 		/* look ma, no defaults */
+ 		if (!nodefault) {
+ 			scan_dir(UCLIBC_RUNTIME_PREFIX "lib");
+-			scan_dir(UCLIBC_RUNTIME_PREFIX "usr/lib");
+ #ifndef __LDSO_CACHE_SUPPORT__
+-			scan_dir(UCLIBC_RUNTIME_PREFIX "usr/X11R6/lib");
++			scan_dir(UCLIBC_RUNTIME_PREFIX "X11R6/lib");
+ #else
+ 			/* I guess the defaults aren't good enough */
+ 			if ((extpath = get_extpath())) {
+@@ -963,8 +962,7 @@ int main(int argc, char **argv)
+ 						while (cp[--len] == '/' && len)
+ 							cp[len] = 0;
+ 					/* we do the redundancy check only if cache usage is enabled */
+-					if (strcmp(UCLIBC_RUNTIME_PREFIX "lib", cp) == 0
+-					    || strcmp(UCLIBC_RUNTIME_PREFIX "usr/lib", cp) == 0) {
++					if (strcmp(UCLIBC_RUNTIME_PREFIX "lib", cp) == 0) {
+ 						if (verbose >= 0)
+ 							warnx("You should remove `%s' from `%s'", cp, LDSO_CONF);
+ 						continue;
+diff -rupN a/utils/ldd.c b/utils/ldd.c
+--- a/utils/ldd.c	2016-05-29 10:19:37.000000000 +0300
++++ b/utils/ldd.c	2016-06-17 11:15:16.000000000 +0300
+@@ -463,9 +463,9 @@ static void locate_library_file(ElfW(Ehd
+ 
+ 	/* Lastly, search the standard list of paths for the library.
+ 	   This list must exactly match the list in uClibc/ldso/ldso/dl-elf.c */
+-	path = UCLIBC_RUNTIME_PREFIX "lib:" UCLIBC_RUNTIME_PREFIX "usr/lib"
++	path = UCLIBC_RUNTIME_PREFIX "lib"
+ #ifndef __LDSO_CACHE_SUPPORT__
+-	    ":" UCLIBC_RUNTIME_PREFIX "usr/X11R6/lib"
++	    ":" UCLIBC_RUNTIME_PREFIX "X11R6/lib"
+ #endif
+ 	    ;
+ 	search_for_named_library(lib->name, buf, path);
+@@ -707,8 +707,8 @@ foo:
+ 			pid_t pid;
+ 			int status;
+ 			static const char *const environment[] = {
+-				"PATH=/usr/bin:/bin:/usr/sbin:/sbin",
+-				"SHELL=/bin/sh",
++				"PATH=/ffp/bin:/ffp/sbin:/usr/bin:/bin:/usr/sbin:/sbin",
++				"SHELL=/ffp/bin/bash",
+ 				"LD_TRACE_LOADED_OBJECTS=1",
+ 				NULL
+ 			};

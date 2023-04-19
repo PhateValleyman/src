@@ -1,0 +1,30 @@
+diff -rupN a/libc/inet/getaddrinfo.c b/libc/inet/getaddrinfo.c
+--- a/libc/inet/getaddrinfo.c	2017-10-05 10:38:10.639440492 +0300
++++ b/libc/inet/getaddrinfo.c	2017-10-05 11:02:07.820155666 +0300
+@@ -815,7 +815,7 @@ static const struct gaih gaih[] = {
+ 
+ /*
+  * A call to getaddrinfo might return multiple answers. To provide
+- * possibility to change the sorting we must use /etc/gai.conf file,
++ * possibility to change the sorting we must use /ffp/etc/gai.conf file,
+  * like glibc.
+  *
+  * gai.conf format:
+@@ -840,7 +840,7 @@ static const struct gaih gaih[] = {
+  */
+ static void __gai_conf_parse(void)
+ {
+-	/* NO reread of /etc/gai.conf on change. */
++	/* NO reread of /ffp/etc/gai.conf on change. */
+ 	if (__gai_precedence != 0)
+ 		return;
+ 
+@@ -849,7 +849,7 @@ static void __gai_conf_parse(void)
+ 	parser_t *parser;
+ 	char **tok = NULL;
+ 
+-	parser = config_open("/etc/gai.conf");
++	parser = config_open("/ffp/etc/gai.conf");
+ 	if (!parser)
+ 		return;
+ 

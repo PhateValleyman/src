@@ -1,0 +1,14 @@
+--- hotspot/src/share/vm/interpreter/interpreterRuntime.cpp	2015-02-04 22:14:39.000000000 +0200
++++ /mnt/HD_a2/buildfirst/openjdk-8.40.25/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp	2015-04-08 20:46:23.635115065 +0300
+@@ -407,7 +407,11 @@
+     // during deoptimization so the interpreter needs to skip it when
+     // the frame is popped.
+     thread->set_do_not_unlock_if_synchronized(true);
++#ifdef CC_INTERP
++    return (address) -1;
++#else
+     return Interpreter::remove_activation_entry();
++#endif
+   }
+ 
+   // Need to do this check first since when _do_not_unlock_if_synchronized

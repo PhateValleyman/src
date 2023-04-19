@@ -1,0 +1,1291 @@
+nohup: ignoring input
+--12:31:55--  http://sourceforge.net/code-snapshots/svn/l/li/libtorrent/code/libtorrent-code-8647-branches-RC_0_16.zip
+           => `libtorrent-code-8647-branches-RC_0_16.zip'
+Resolving sourceforge.net... 216.34.181.60
+Connecting to sourceforge.net[216.34.181.60]:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3,339,339 [application/zip]
+
+    0K .......... .......... .......... .......... ..........  1%  116.29 KB/s
+   50K .......... .......... .......... .......... ..........  3%   26.08 KB/s
+  100K .......... .......... .......... .......... ..........  4%  346.08 KB/s
+  150K .......... .......... .......... .......... ..........  6%  116.41 KB/s
+  200K .......... .......... .......... .......... ..........  7%   66.97 KB/s
+  250K .......... .......... .......... .......... ..........  9%  101.03 KB/s
+  300K .......... .......... .......... .......... .......... 10%  138.31 KB/s
+  350K .......... .......... .......... .......... .......... 12%  142.22 KB/s
+  400K .......... .......... .......... .......... .......... 13%  156.28 KB/s
+  450K .......... .......... .......... .......... .......... 15%  202.56 KB/s
+  500K .......... .......... .......... .......... .......... 16%  225.24 KB/s
+  550K .......... .......... .......... .......... .......... 18%  196.97 KB/s
+  600K .......... .......... .......... .......... .......... 19%  285.58 KB/s
+  650K .......... .......... .......... .......... .......... 21%  205.68 KB/s
+  700K .......... .......... .......... .......... .......... 22%  271.62 KB/s
+  750K .......... .......... .......... .......... .......... 24%  344.78 KB/s
+  800K .......... .......... .......... .......... .......... 26%  288.54 KB/s
+  850K .......... .......... .......... .......... .......... 27%  284.21 KB/s
+  900K .......... .......... .......... .......... .......... 29%  264.83 KB/s
+  950K .......... .......... .......... .......... .......... 30%  348.66 KB/s
+ 1000K .......... .......... .......... .......... .......... 32%  291.32 KB/s
+ 1050K .......... .......... .......... .......... .......... 33%  350.11 KB/s
+ 1100K .......... .......... .......... .......... .......... 35%  345.92 KB/s
+ 1150K .......... .......... .......... .......... .......... 36%  350.83 KB/s
+ 1200K .......... .......... .......... .......... .......... 38%  351.00 KB/s
+ 1250K .......... .......... .......... .......... .......... 39%  355.22 KB/s
+ 1300K .......... .......... .......... .......... .......... 41%  438.29 KB/s
+ 1350K .......... .......... .......... .......... .......... 42%  518.95 KB/s
+ 1400K .......... .......... .......... .......... .......... 44%  452.82 KB/s
+ 1450K .......... .......... .......... .......... .......... 45%  351.20 KB/s
+ 1500K .......... .......... .......... .......... .......... 47%  450.99 KB/s
+ 1550K .......... .......... .......... .......... .......... 49%  443.46 KB/s
+ 1600K .......... .......... .......... .......... .......... 50%  538.44 KB/s
+ 1650K .......... .......... .......... .......... .......... 52%  453.30 KB/s
+ 1700K .......... .......... .......... .......... .......... 53%  449.18 KB/s
+ 1750K .......... .......... .......... .......... .......... 55%  775.00 KB/s
+ 1800K .......... .......... .......... .......... .......... 56%  463.11 KB/s
+ 1850K .......... .......... .......... .......... .......... 58%  455.40 KB/s
+ 1900K .......... .......... .......... .......... .......... 59%    1.22 MB/s
+ 1950K .......... .......... .......... .......... .......... 61%  462.13 KB/s
+ 2000K .......... .......... .......... .......... .......... 62%  537.14 KB/s
+ 2050K .......... .......... .......... .......... .......... 64%  626.11 KB/s
+ 2100K .......... .......... .......... .......... .......... 65%  468.91 KB/s
+ 2150K .......... .......... .......... .......... .......... 67%    1.24 MB/s
+ 2200K .......... .......... .......... .......... .......... 68%  463.66 KB/s
+ 2250K .......... .......... .......... .......... .......... 70%  809.02 KB/s
+ 2300K .......... .......... .......... .......... .......... 72%  605.52 KB/s
+ 2350K .......... .......... .......... .......... .......... 73%  545.40 KB/s
+ 2400K .......... .......... .......... .......... .......... 75%  644.90 KB/s
+ 2450K .......... .......... .......... .......... .......... 76%  761.80 KB/s
+ 2500K .......... .......... .......... .......... .......... 78%  640.16 KB/s
+ 2550K .......... .......... .......... .......... .......... 79%  688.45 KB/s
+ 2600K .......... .......... .......... .......... .......... 81%  709.54 KB/s
+ 2650K .......... .......... .......... .......... .......... 82%  779.91 KB/s
+ 2700K .......... .......... .......... .......... .......... 84%  635.10 KB/s
+ 2750K .......... .......... .......... .......... .......... 85%    1.33 MB/s
+ 2800K .......... .......... .......... .......... .......... 87%  479.08 KB/s
+ 2850K .......... .......... .......... .......... .......... 88%    1.46 MB/s
+ 2900K .......... .......... .......... .......... .......... 90%  594.99 KB/s
+ 2950K .......... .......... .......... .......... .......... 91%    1.39 MB/s
+ 3000K .......... .......... .......... .......... .......... 93%  481.34 KB/s
+ 3050K .......... .......... .......... .......... .......... 95%    1.31 MB/s
+ 3100K .......... .......... .......... .......... .......... 96%  618.49 KB/s
+ 3150K .......... .......... .......... .......... .......... 98%  863.13 KB/s
+ 3200K .......... .......... .......... .......... .......... 99%  801.80 KB/s
+ 3250K .......... .                                          100%  562.01 KB/s
+
+12:32:07 (283.82 KB/s) - `libtorrent-code-8647-branches-RC_0_16.zip' saved [3339339/3339339]
+
+Archive:  libtorrent-code-8647-branches-RC_0_16.zip
+   creating: libtorrent-code-8647-branches-RC_0_16/
+   creating: libtorrent-code-8647-branches-RC_0_16/m4/
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_boost_system.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/config.rpath  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/pkgconfig.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_boost_base.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_check_geoip.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_check_openssl.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_python_devel.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/gettext-lib.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/iconv.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_boost_python.m4  
+  inflating: libtorrent-code-8647-branches-RC_0_16/m4/ax_pthread.m4  
+   creating: libtorrent-code-8647-branches-RC_0_16/src/
+   creating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/refresh.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/routing_table.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/rpc_manager.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/node_id.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/node.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/find_data.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/traversal_algorithm.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/kademlia/dht_tracker.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/time.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/settings.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/thread.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/enum_net.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/storage.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/alert.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/torrent_info.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/bloom_filter.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/create_torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/file.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/lsd.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/socks5_stream.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/utp_stream.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/timestamp_history.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/session.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/rsa.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/utf8.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/tracker_manager.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/allocator.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/escape_string.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/ut_metadata.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/magnet_uri.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/parse_url.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/sha1.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/puff.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/policy.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/packet_buffer.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/connection_queue.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/entry.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/file_storage.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/string_util.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/pe_crypto.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/rss.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/broadcast_socket.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/torrent_handle.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/http_tracker_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/identify_client.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/chained_buffer.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/peer_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/ConvertUTF.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/assert.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/bt_peer_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/bandwidth_limit.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/GeoIP.c  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/i2p_stream.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/session_impl.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/smart_ban.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/disk_buffer_pool.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/web_peer_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/file_pool.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/asio_ssl.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/lt_trackers.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/ip_filter.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/socket_io.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/disk_buffer_holder.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/random.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/upnp.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/error_code.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/udp_tracker_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/piece_picker.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/lazy_bdecode.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/mpi.c  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/metadata_transfer.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/socket_type.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/http_stream.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/asio.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/bandwidth_manager.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/http_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/http_seed_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/natpmp.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/udp_socket.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/instantiate_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/disk_io_thread.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/ut_pex.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/gzip.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/utp_socket_manager.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/web_connection_base.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/stat.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/logger.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/bandwidth_queue_entry.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/src/http_parser.cpp  
+   creating: libtorrent-code-8647-branches-RC_0_16/docs/
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_sec.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/manual.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/session_stats_peers.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/write_disk_buffers.graffle  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/client_test.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/storage.png  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/arctic_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/deluge.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/stylesheet  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/libtorrent_plugins.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_access_no_elevator.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/bitslug_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/electric_sheep_thumb.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/Linkage.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/bubba.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_buffer_before_optimization.png  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/bitscast_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/our_delay_base_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/delays_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/extension_protocol.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/projects.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_extensions.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/pump.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/building.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/running_tests.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/write_disk_buffers.dot  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/libtorrent_screen.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_buffer.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/storage.graffle  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_sec.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/troubleshooting.dot  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_rss.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/bitfox.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/contributing.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/ips.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/index.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/client_test.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/python_binding.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/read_disk_buffers.png  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/make_thumb.sh  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/examples.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/features.rst  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/halite_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/fdm.png  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/folx.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/make_torrent.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/projects.html  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/zyxel.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_store.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/unicode_support.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/building.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/read_disk_buffers.graffle  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/utp.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/hacking.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/makefile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/lince.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/cwnd.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/utp.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/ip_id_v4.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/merkle_tree.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/tvitty.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/ip_id_v6.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/ziptorrent_thumb.gif  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/miro.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/firetorrent.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/read_disk_buffers.dot  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/moopolice_thumb.gif  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/style.css  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/udp_tracker_protocol.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/template.txt  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/qbittorrent_thumb.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_access.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/udp_tracker_protocol.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_access_elevator.png  
+ extracting: libtorrent-code-8647-branches-RC_0_16/docs/limewire.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/client_test.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/our_delay_base.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_store.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/merkle_tree.graffle  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/fatrat.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/delays.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/tonidoplug.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_extensions.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/tvblob.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/bitrocket_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/dht_rss.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/running_tests.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/leechcraft.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/features.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/examples.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/im_thumb.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/bitbuddy_thumb.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/btg_thumb.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/manual.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/flush.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/libtorrent_plugins.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/make_torrent.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/write_disk_buffers.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_io.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/extension_protocol.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/disk_buffer_sample.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/tuning.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/t2e.jpg  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/contributing.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/index.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/troubleshooting.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/tuning.rst  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/cwnd_thumb.png  
+  inflating: libtorrent-code-8647-branches-RC_0_16/docs/python_binding.html  
+  inflating: libtorrent-code-8647-branches-RC_0_16/autotool.sh  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_session_stats.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/list_files.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_bandwidth_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/AUTHORS  
+ extracting: libtorrent-code-8647-branches-RC_0_16/bootstrap.sh  
+  inflating: libtorrent-code-8647-branches-RC_0_16/set_version.py  
+   creating: libtorrent-code-8647-branches-RC_0_16/bindings/
+   creating: libtorrent-code-8647-branches-RC_0_16/bindings/python/
+   creating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/string.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/torrent_status.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/entry.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/utility.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/session_settings.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/ip_filter.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/peer_info.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/alert.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/torrent_info.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/torrent_handle.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/big_number.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/create_torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/error_code.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/gil.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/magnet_uri.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/session.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/module.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/version.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/fingerprint.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/optional.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/converters.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/datetime.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/src/torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/rss_reader.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/make_torrent.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/client.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/Jamfile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/setup.py.in  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/python/simple_client.py  
+   creating: libtorrent-code-8647-branches-RC_0_16/bindings/c/
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/c/library.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/c/Jamfile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/c/simple_client.c  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/c/libtorrent.h  
+ extracting: libtorrent-code-8647-branches-RC_0_16/bindings/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/bindings/README.txt  
+   creating: libtorrent-code-8647-branches-RC_0_16/tools/
+  inflating: libtorrent-code-8647-branches-RC_0_16/tools/Jamfile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/tools/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/tools/parse_hash_fails.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_buffer_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/libtorrent-rasterbar-cmake.pc.in  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_disk_access.py  
+   creating: libtorrent-code-8647-branches-RC_0_16/test/
+   creating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/slash_path.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/invalid_name.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/invalid_piece_len.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/single_multi_file.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/negative_file_size.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/negative_size.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/duplicate_files.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/url_list.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/invalid_path_list.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/unaligned_pieces.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/empty_httpseed.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/long_name.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/creation_date.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/invalid_info.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/pad_file.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/negative_piece_len.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/parent_path.torrent  
+ extracting: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/string.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/backslash_path.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/invalid_name2.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/empty_path.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/base.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/missing_piece_len.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/no_name.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/invalid_pieces.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/whitespace_url.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/url_list2.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/missing_path_list.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/httpseed.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/hidden_parent_path.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrents/url_list3.torrent  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/cb.xml  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_pe_crypto.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/eztv.xml  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_rss.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_trackers_extension.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_buffer.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_checking.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_dht.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_metadata_extension.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_web_seed.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_upnp.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_piece_picker.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_auto_unchoke.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrent_parse.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/main.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_swarm.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/Jamfile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/mn.xml  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_bandwidth_limiter.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_threads.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_natpmp.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/dht_server.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_storage.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/setup_transfer.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_bdecode_performance.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_utp.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/dht_server.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/setup_transfer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_hasher.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_privacy.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_ip_filter.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/pb.xml  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_lsd.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/peer_server.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_session.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_transfer.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/peer_server.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_fast_extension.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_bencoding.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_primitives.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_tracker.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_pex.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/test_http_connection.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/test/kat.xml  
+   creating: libtorrent-code-8647-branches-RC_0_16/include/
+   creating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/
+   creating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/msg.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/observer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/find_data.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/traversal_algorithm.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/dht_tracker.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/refresh.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/routing_table.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/rpc_manager.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/node_id.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/node.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/logging.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/kademlia/node_entry.hpp  
+   creating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/aux_/
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/aux_/session_impl.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/error.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/xml_parse.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/tommath_class.h  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/assert.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bt_peer_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bencode.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bandwidth_limit.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/i2p_stream.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/proxy_base.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/web_peer_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/file_pool.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/ssl_stream.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/disk_buffer_pool.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bandwidth_socket.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/socket_io.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/ip_filter.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/allocator.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/disk_buffer_holder.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/random.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bitfield.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/upnp.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/piece_picker.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/udp_tracker_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/error_code.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/sliding_average.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/union_endpoint.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/version.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/invariant_check.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/socket.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/socket_type.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/struct_debug.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/http_stream.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/http_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bandwidth_manager.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/http_seed_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/natpmp.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/copy_ptr.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/ConvertUTF.h  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/udp_socket.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/instantiate_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/intrusive_ptr_base.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/disk_io_thread.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/io.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/gzip.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/utp_socket_manager.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/ptime.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/stat.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/build_config.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/piece_block_progress.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/address.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/web_connection_base.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/socket_type_fwd.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/debug.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bandwidth_queue_entry.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/http_parser.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/peer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/alert_types.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/time.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/settings.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/GeoIP.h  
+   creating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/lt_trackers.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/smart_ban.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/logger.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/metadata_transfer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/ut_pex.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/extensions/ut_metadata.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/session_settings.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/thread.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/storage.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/alert.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/peer_id.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/add_torrent_params.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/torrent_info.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/tommath.h  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/enum_net.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/buffer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/pch.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/bloom_filter.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/size_type.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/packet_buffer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/create_torrent.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/file.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/lsd.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/socks5_stream.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/utp_stream.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/session.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/timestamp_history.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/max.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/rsa.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/io_service.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/tracker_manager.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/escape_string.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/utf8.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/magnet_uri.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/fingerprint.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/alloca.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/parse_url.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/lazy_entry.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/torrent.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/policy.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/puff.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/file_storage.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/entry.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/connection_queue.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/string_util.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/peer_request.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/pe_crypto.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/deadline_timer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/config.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/storage_defs.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/rss.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/peer_info.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/broadcast_socket.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/torrent_handle.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/identify_client.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/http_tracker_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/hasher.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/tommath_superclass.h  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/peer_connection.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/chained_buffer.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/io_service_fwd.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/include/libtorrent/session_status.hpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_disk_buffer_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/configure.ac  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_disk_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/Jamfile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/COPYING  
+ extracting: libtorrent-code-8647-branches-RC_0_16/NEWS  
+  inflating: libtorrent-code-8647-branches-RC_0_16/CMakeLists.txt  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_dht_stats.py  
+   creating: libtorrent-code-8647-branches-RC_0_16/examples/
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/upnp_test.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/enum_if.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/dump_torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/parse_request_log.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/connection_tester.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/run_benchmarks.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/Jamfile  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/utp_test.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/simple_client.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/rss_reader.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/fragmentation_test.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/make_torrent.cpp  
+  inflating: libtorrent-code-8647-branches-RC_0_16/examples/client_test.cpp  
+ extracting: libtorrent-code-8647-branches-RC_0_16/Jamroot.jam  
+  inflating: libtorrent-code-8647-branches-RC_0_16/LICENSE  
+  inflating: libtorrent-code-8647-branches-RC_0_16/darwin_valgrind.suppressions  
+  inflating: libtorrent-code-8647-branches-RC_0_16/dht_flood.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/ChangeLog  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_dht_rtt.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_memory_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_utp_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/build_dist.sh  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_dht_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/README  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_sample.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/parse_peer_log.py  
+  inflating: libtorrent-code-8647-branches-RC_0_16/Makefile.am  
+  inflating: libtorrent-code-8647-branches-RC_0_16/libtorrent-rasterbar.pc.in  
+
+[1mBootstrapping autotools for libtorrent-rasterbar
+(B[m
+[1mChecking autotools requirements:
+(B[m
+[1mChecking for autoconf >= 2.63...
+(B[m  testing autoconf... found 2.68
+[1mChecking for automake >= 1.11...
+(B[m  testing automake... found 1.11.1
+[1mChecking for libtool >= 2.2.6...
+(B[m  testing libtoolize... found 2.4
+Copying m4/config.rpath to build-aux
+
+[1mProcessing configure.ac
+(B[m
+[1mRunning libtoolize...
+(B[mlibtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, `build-aux'.
+libtoolize: copying file `build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+[1mRunning aclocal...
+(B[mconfigure.ac:123: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2591: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2607: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:123: the top level
+configure.ac:449: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2662: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2679: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:517: AS_CASE is expanded from...
+configure.ac:449: the top level
+configure.ac:536: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2591: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2607: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:517: AS_CASE is expanded from...
+configure.ac:536: the top level
+[1mRunning autoconf...
+(B[mconfigure.ac:123: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2591: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2607: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:123: the top level
+configure.ac:449: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2662: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2679: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:517: AS_CASE is expanded from...
+configure.ac:449: the top level
+configure.ac:536: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2591: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2607: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:517: AS_CASE is expanded from...
+configure.ac:536: the top level
+[1mRunning automake...
+(B[mconfigure.ac:123: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2591: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2607: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_system.m4:33: AX_BOOST_SYSTEM is expanded from...
+configure.ac:123: the top level
+configure.ac:449: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2662: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2679: AC_LINK_IFELSE is expanded from...
+m4/ax_check_openssl.m4:38: AX_CHECK_OPENSSL is expanded from...
+../../lib/m4sugar/m4sh.m4:517: AS_CASE is expanded from...
+configure.ac:449: the top level
+configure.ac:536: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:194: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2591: _AC_COMPILE_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2607: AC_COMPILE_IFELSE is expanded from...
+../../lib/m4sugar/m4sh.m4:606: AS_IF is expanded from...
+../../lib/autoconf/general.m4:2032: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2053: AC_CACHE_CHECK is expanded from...
+m4/ax_boost_python.m4:62: AX_BOOST_PYTHON is expanded from...
+../../lib/m4sugar/m4sh.m4:517: AS_CASE is expanded from...
+configure.ac:536: the top level
+configure.ac:75: installing `build-aux/config.guess'
+configure.ac:75: installing `build-aux/config.sub'
+configure.ac:81: installing `build-aux/install-sh'
+configure.ac:81: installing `build-aux/missing'
+examples/Makefile.am: installing `build-aux/depcomp'
+
+[1mBootstrap complete, now run `configure'.
+(B[m
+Building libtorrent-rasterbar 0.16.10
+
+Checking for a C/C++ compiler to use:
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking whether gcc and cc understand -c and -o together... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking whether g++ understands -c and -o together... yes
+
+Checking system type:
+checking build system type... armv5tel-unknown-linux-gnueabi
+checking host system type... armv5tel-unknown-linux-gnueabi
+checking target system type... armv5tel-unknown-linux-gnueabi
+
+Initializing Automake:
+checking for a BSD-compatible install... /ffp/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /ffp/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking dependency style of g++... gcc3
+
+Initializing Libtool:
+checking how to print strings... printf
+checking for a sed that does not truncate output... /ffp/bin/sed
+checking for grep that handles long lines and -e... /ffp/bin/grep
+checking for egrep... /ffp/bin/grep -E
+checking for fgrep... /ffp/bin/grep -F
+checking for ld used by gcc... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /ffp/bin/nm -B
+checking the name lister (/ffp/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert armv5tel-unknown-linux-gnueabi file names to armv5tel-unknown-linux-gnueabi format... func_convert_file_noop
+checking how to convert armv5tel-unknown-linux-gnueabi file names to toolchain format... func_convert_file_noop
+checking for /ffp/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /ffp/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/ffp/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /ffp/bin/ld
+checking if the linker (/ffp/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/ffp/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+
+Checking for posix thread support:
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -lpthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking whether to check for GCC pthread/shared inconsistencies... yes
+checking whether -lpthread fixes that... yes
+Checking for visibility support:
+checking for __attribute__((visibility("hidden")))... found
+yes
+
+Checking for boost libraries:
+checking for boostlib >= 1.36... yes
+checking whether the Boost::System library is available... yes
+checking for exit in -lboost_system... yes
+
+Checking for pkg-config:
+checking for pkg-config... /ffp/bin/pkg-config
+checking pkg-config is at least version 0.20... yes
+
+Checking for functions and headers:
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for gethostbyname... yes
+checking for gethostbyname_r... yes
+checking for clock_gettime... yes
+
+Checking build options:
+checking whether deprecated functions should be enabled... yes
+checking whether debug build should be enabled... no
+checking whether invariant check should be enabled... no
+checking whether logging to disk should be enabled... no
+checking whether statistics logging should be enabled... no
+checking whether disk activity logging should be enabled... no
+
+Checking features to be enabled:
+checking whether encryption support should be enabled... yes
+configure: encryption support: now checking for the OpenSSL library...
+checking for pkg-config... /ffp/bin/pkg-config
+checking whether compiling and linking against OpenSSL works... yes
+checking whether geoip support should be enabled... yes
+checking whether dht support should be enabled... yes
+checking whether pool allocators should be enabled... yes
+
+Checking for extra build files:
+checking whether example files should be built... no
+checking whether test files should be built... no
+checking whether python bindings should be built... yes
+checking for a Python interpreter with version >= 2.4... python
+checking for python... /ffp/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/site-packages
+checking for python2.7... (cached) /ffp/bin/python
+checking for a version of Python >= '2.1.0'... yes
+checking for a version of Python >= '2.4'... yes
+checking for the distutils Python package... yes
+checking for Python include path... -I/ffp/include/python2.7
+checking for Python library path... -L/ffp/lib -lpython2.7
+checking for Python site-packages path... /ffp/lib/python2.7/site-packages
+checking python extra libraries...  -lpthread -ldl  -lutil
+checking python extra linking flags... -Xlinker -export-dynamic
+checking consistency of all components of python development environment... yes
+checking whether the Boost::Python library is available... yes
+checking for main in -lboost_python... yes
+
+Checking for external libraries:
+checking for FIEMAP support... checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking for linux/fiemap.h... no
+checking whether to link against system libgeoip... yes
+configure: libgeoip: now checking for the libgeoip library...
+checking for libgeoip with pkg-config... no
+checking GeoIP.h usability... yes
+checking GeoIP.h presence... yes
+checking for GeoIP.h... yes
+checking for GeoIP_new in -lGeoIP... yes
+checking whether to link against system libiconv... checking for shared library run path origin... done
+yes
+checking for iconv... yes
+checking how to link with libiconv... /ffp/lib/libiconv.so -Wl,-rpath -Wl,/ffp/lib
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+
+Generating Makefiles:
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating include/libtorrent/Makefile
+config.status: creating examples/Makefile
+config.status: creating test/Makefile
+config.status: creating tools/Makefile
+config.status: creating bindings/Makefile
+config.status: creating bindings/python/Makefile
+config.status: creating bindings/python/setup.py
+config.status: creating libtorrent-rasterbar.pc
+config.status: creating libtorrent-rasterbar-cmake.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+Configure script has finished system check.
+
+   Config results:
+  -=-=-=-=-=-=-=-=-
+
+Package:
+  name:                 libtorrent-rasterbar
+  version:              0.16.10
+  svn revision:         8403
+
+Build environment:
+  build system:         armv5tel-unknown-linux-gnueabi
+  host system:          armv5tel-unknown-linux-gnueabi
+  target system:        armv5tel-unknown-linux-gnueabi
+
+Compiler and linker flags:
+  CPPFlags:             -I/ffp/include -I/ffp/include
+  CFlags:                -lpthread -march=armv5te -O3 -fvisibility=hidden
+  CXXFlags:             -march=armv5te -O3 -DBOOST_ASIO_DISABLE_EPOLL -fvisibility-inlines-hidden
+  LDFlags:              -L/ffp/lib -L/ffp/lib
+  Libs:                 -L/ffp/lib -liconv -R/ffp/lib -lGeoIP -lpthread  
+  Defs:                 -DPACKAGE_NAME=\"libtorrent-rasterbar\" -DPACKAGE_TARNAME=\"libtorrent-rasterbar\" -DPACKAGE_VERSION=\"0.16.10\" -DPACKAGE_STRING=\"libtorrent-rasterbar\ 0.16.10\" -DPACKAGE_BUGREPORT=\"arvid@rasterbar.com\" -DPACKAGE_URL=\"http://www.libtorrent.org\" -DPACKAGE=\"libtorrent-rasterbar\" -DVERSION=\"0.16.10\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_PTHREAD=1 -DHAVE_BOOST=1 -DHAVE_BOOST_SYSTEM=1 -D_FILE_OFFSET_BITS=64 -DHAVE_GETHOSTBYNAME=1 -DHAVE_GETHOSTBYNAME_R=1 -DGETHOSTBYNAME_R_RETURNS_INT=1 -DHAVE_CLOCK_GETTIME=1 -DNDEBUG=1 -DTORRENT_USE_OPENSSL=1 -DHAVE_PYTHON=\"2.7\" -DHAVE_BOOST_PYTHON=1 -DHAVE_LINUX_TYPES_H=1 -DHAVE_ICONV=1 -DICONV_CONST= -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE=1 -DBOOST_ASIO_ENABLE_CANCELIO=1 -DBOOST_ASIO_DYN_LINK=1 -DTORRENT_BUILDING_SHARED=1
+
+Build options:
+  deprecated functions: yes
+  debug build:          no
+  invariant checks:     no
+  logging support:      no
+  statistics:           no
+  disk statistics:      no
+
+Features:
+  encryption support:   yes
+  geoip support:        yes
+  dht support:          yes
+  pool allocators:      yes
+
+Extra builds:
+  examples:             no
+  tests:                no
+  python bindings:      yes
+
+Pthread library:
+  CFlags:               -lpthread
+  Libs:                 -lpthread 
+
+Boost libraries:
+  version:              
+  CPPFlags:             -I/ffp/include
+  LDFlags:              -L/ffp/lib
+  boost.system:         -lboost_system
+  boost.python:         -lboost_python
+
+Python environment:
+  -automake-
+  binary:               /ffp/bin/python
+  version:              2.7
+  platform:             linux2
+  prefix:               ${prefix}
+  exec_prefix:          ${exec_prefix}
+  pythondir:            ${prefix}/lib/python2.7/site-packages
+  pkgpythondir:         ${pythondir}/libtorrent-rasterbar
+  pyexecdir:            ${exec_prefix}/lib/python2.7/site-packages
+  pkgpyexecdir:         ${pyexecdir}/libtorrent-rasterbar
+
+  -m4-
+  cppflags:             -I/ffp/include/python2.7
+  ldflags:              -L/ffp/lib -lpython2.7
+  extra libs:            -lpthread -ldl  -lutil
+  extra ldflags:        -Xlinker -export-dynamic
+
+
+External libraries:
+  system libgeoip:      yes
+  system libiconv:      yes
+
+GeoIP library:
+  GeoIP CFlags:         
+  GeoIP Libs:           -lGeoIP
+
+Iconv library:
+  Iconv Libs:           -L/ffp/lib -liconv -R/ffp/lib
+
+OpenSSL library:
+  OpenSSL Libs:         -lssl -lcrypto -ldl  
+  OpenSSL LDFlags:      -L/ffp/lib  
+  OpenSSL Includes:     -I/ffp/include  
+
+Type 'make' to compile libtorrent-rasterbar 0.16.10
+or type 'make V=1' for verbose compiling
+and then 'make install' to install it into /ffp
+
+Making all in include/libtorrent
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/include/libtorrent'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/include/libtorrent'
+Making all in src
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/src'
+  CXX    web_connection_base.lo
+  CXX    alert.lo
+  CXX    allocator.lo
+  CXX    asio.lo
+  CXX    assert.lo
+  CXX    bandwidth_limit.lo
+  CXX    bandwidth_manager.lo
+  CXX    bandwidth_queue_entry.lo
+  CXX    bloom_filter.lo
+  CXX    broadcast_socket.lo
+  CXX    bt_peer_connection.lo
+  CXX    chained_buffer.lo
+  CXX    connection_queue.lo
+  CXX    ConvertUTF.lo
+  CXX    create_torrent.lo
+  CXX    disk_buffer_holder.lo
+  CXX    disk_buffer_pool.lo
+  CXX    disk_io_thread.lo
+  CXX    entry.lo
+  CXX    enum_net.lo
+  CXX    error_code.lo
+  CXX    escape_string.lo
+  CXX    file.lo
+  CXX    file_pool.lo
+  CXX    file_storage.lo
+  CXX    gzip.lo
+  CXX    http_connection.lo
+  CXX    http_parser.lo
+  CXX    http_seed_connection.lo
+  CXX    http_stream.lo
+  CXX    http_tracker_connection.lo
+  CXX    i2p_stream.lo
+  CXX    identify_client.lo
+  CXX    instantiate_connection.lo
+  CXX    ip_filter.lo
+  CXX    lazy_bdecode.lo
+  CXX    logger.lo
+  CXX    lsd.lo
+  CXX    lt_trackers.lo
+  CXX    magnet_uri.lo
+magnet_uri.cpp: In function 'libtorrent::torrent_handle libtorrent::add_magnet_uri(libtorrent::session&, const std::string&, const std::string&, libtorrent::storage_mode_t, bool, libtorrent::storage_constructor_type, void*)':
+magnet_uri.cpp:123:40: warning: 'libtorrent::torrent_handle libtorrent::session::add_torrent(const char*, const libtorrent::sha1_hash&, const char*, const std::string&, const libtorrent::entry&, libtorrent::storage_mode_t, bool, libtorrent::storage_constructor_type, void*)' is deprecated (declared at ../include/libtorrent/session.hpp:234)
+magnet_uri.cpp: In function 'libtorrent::torrent_handle libtorrent::add_magnet_uri(libtorrent::session&, const std::string&, libtorrent::add_torrent_params)':
+magnet_uri.cpp:130:54: warning: 'libtorrent::torrent_handle libtorrent::add_magnet_uri(libtorrent::session&, const std::string&, libtorrent::add_torrent_params, boost::system::error_code&)' is deprecated (declared at ../include/libtorrent/magnet_uri.hpp:68)
+  CXX    metadata_transfer.lo
+  CC     mpi.lo
+cc1: warning: command line option "-ftemplate-depth-100" is valid for C++/ObjC++ but not for C
+  CXX    natpmp.lo
+  CXX    parse_url.lo
+  CXX    pe_crypto.lo
+  CXX    peer_connection.lo
+  CXX    piece_picker.lo
+  CXX    packet_buffer.lo
+  CXX    policy.lo
+  CXX    puff.lo
+  CXX    random.lo
+  CXX    rsa.lo
+  CXX    rss.lo
+rss.cpp:458:3: warning: invalid access to non-static data member 'libtorrent::feed::m_title'  of NULL object
+rss.cpp:458:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+rss.cpp:459:3: warning: invalid access to non-static data member 'libtorrent::feed::m_description'  of NULL object
+rss.cpp:459:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+rss.cpp:460:3: warning: invalid access to non-static data member 'libtorrent::feed::m_last_attempt'  of NULL object
+rss.cpp:460:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+rss.cpp:461:3: warning: invalid access to non-static data member 'libtorrent::feed::m_last_update'  of NULL object
+rss.cpp:461:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+  CXX    session.lo
+  CXX    session_impl.lo
+session_impl.cpp:523:3: warning: invalid access to non-static data member 'libtorrent::aux::session_impl::m_settings'  of NULL object
+session_impl.cpp:523:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+session_impl.cpp:525:3: warning: invalid access to non-static data member 'libtorrent::aux::session_impl::m_dht_settings'  of NULL object
+session_impl.cpp:525:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+session_impl.cpp:527:3: warning: invalid access to non-static data member 'libtorrent::aux::session_impl::m_proxy'  of NULL object
+session_impl.cpp:527:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+session_impl.cpp:532:3: warning: invalid access to non-static data member 'libtorrent::aux::session_impl::m_pe_settings'  of NULL object
+session_impl.cpp:532:3: warning: (perhaps the 'offsetof' macro was used incorrectly)
+  CXX    settings.lo
+  CXX    sha1.lo
+  CXX    smart_ban.lo
+  CXX    socket_io.lo
+  CXX    socket_type.lo
+  CXX    socks5_stream.lo
+  CXX    stat.lo
+  CXX    storage.lo
+  CXX    string_util.lo
+  CXX    thread.lo
+  CXX    torrent.lo
+  CXX    torrent_handle.lo
+  CXX    torrent_info.lo
+  CXX    time.lo
+  CXX    timestamp_history.lo
+  CXX    tracker_manager.lo
+  CXX    udp_socket.lo
+  CXX    udp_tracker_connection.lo
+  CXX    upnp.lo
+  CXX    ut_metadata.lo
+  CXX    ut_pex.lo
+  CXX    utf8.lo
+  CXX    utp_socket_manager.lo
+  CXX    utp_stream.lo
+  CXX    web_peer_connection.lo
+  CXX    dht_tracker.lo
+  CXX    find_data.lo
+  CXX    node.lo
+  CXX    node_id.lo
+  CXX    refresh.lo
+  CXX    routing_table.lo
+  CXX    rpc_manager.lo
+  CXX    traversal_algorithm.lo
+  CXX    asio_ssl.lo
+  CXXLD  libtorrent-rasterbar.la
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/src'
+Making all in examples
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/examples'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/examples'
+Making all in test
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/test'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/test'
+Making all in bindings
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+Making all in python
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings/python'
+/ffp/bin/python setup.py build
+running build
+running build_ext
+building 'libtorrent' extension
+creating build
+creating build/temp.linux-armv5tel-2.7
+creating build/temp.linux-armv5tel-2.7/src
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/datetime.cpp -o build/temp.linux-armv5tel-2.7/src/datetime.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/torrent_info.cpp -o build/temp.linux-armv5tel-2.7/src/torrent_info.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/session_settings.cpp -o build/temp.linux-armv5tel-2.7/src/session_settings.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/error_code.cpp -o build/temp.linux-armv5tel-2.7/src/error_code.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/big_number.cpp -o build/temp.linux-armv5tel-2.7/src/big_number.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/module.cpp -o build/temp.linux-armv5tel-2.7/src/module.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/alert.cpp -o build/temp.linux-armv5tel-2.7/src/alert.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/torrent_status.cpp -o build/temp.linux-armv5tel-2.7/src/torrent_status.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/fingerprint.cpp -o build/temp.linux-armv5tel-2.7/src/fingerprint.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/torrent_handle.cpp -o build/temp.linux-armv5tel-2.7/src/torrent_handle.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+src/torrent_handle.cpp: In function 'void set_peer_upload_limit(libtorrent::torrent_handle&, const boost::python::tuple&, int)':
+src/torrent_handle.cpp:321:58: warning: 'void libtorrent::torrent_handle::set_peer_upload_limit(boost::asio::ip::tcp::endpoint, int) const' is deprecated (declared at ../../include/libtorrent/torrent_handle.hpp:279)
+src/torrent_handle.cpp: In function 'void set_peer_download_limit(libtorrent::torrent_handle&, const boost::python::tuple&, int)':
+src/torrent_handle.cpp:326:60: warning: 'void libtorrent::torrent_handle::set_peer_download_limit(boost::asio::ip::tcp::endpoint, int) const' is deprecated (declared at ../../include/libtorrent/torrent_handle.hpp:281)
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/version.cpp -o build/temp.linux-armv5tel-2.7/src/version.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/session.cpp -o build/temp.linux-armv5tel-2.7/src/session.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+src/session.cpp: In function 'libtorrent::torrent_handle<unnamed>::add_torrent_depr(libtorrent::session&, const libtorrent::torrent_info&, const std::string&, const libtorrent::entry&, libtorrent::storage_mode_t, bool)':
+src/session.cpp:172:97: warning: 'libtorrent::torrent_handle libtorrent::session::add_torrent(const libtorrent::torrent_info&, const std::string&, const libtorrent::entry&, libtorrent::storage_mode_t, bool, libtorrent::storage_constructor_type)' is deprecated (declared at ../../include/libtorrent/session.hpp:213)
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/utility.cpp -o build/temp.linux-armv5tel-2.7/src/utility.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/converters.cpp -o build/temp.linux-armv5tel-2.7/src/converters.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/entry.cpp -o build/temp.linux-armv5tel-2.7/src/entry.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/torrent.cpp -o build/temp.linux-armv5tel-2.7/src/torrent.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/string.cpp -o build/temp.linux-armv5tel-2.7/src/string.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+src/string.cpp: In static member function 'static void unicode_from_python::construct(PyObject*, boost::python::converter::rvalue_from_python_stage1_data*)':
+src/string.cpp:56:17: warning: unused variable 'ret'
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/magnet_uri.cpp -o build/temp.linux-armv5tel-2.7/src/magnet_uri.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+src/magnet_uri.cpp: In function 'libtorrent::torrent_handle<unnamed>::_add_magnet_uri(libtorrent::session&, std::string, boost::python::dict)':
+src/magnet_uri.cpp:32:40: warning: 'libtorrent::torrent_handle libtorrent::add_magnet_uri(libtorrent::session&, const std::string&, libtorrent::add_torrent_params)' is deprecated (declared at ../../include/libtorrent/magnet_uri.hpp:62)
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/create_torrent.cpp -o build/temp.linux-armv5tel-2.7/src/create_torrent.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/peer_info.cpp -o build/temp.linux-armv5tel-2.7/src/peer_info.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+gcc -DNDEBUG -g -fwrapv -O3 -Wall -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include -fPIC -I../../include -I/ffp/include -I/ffp/include -I/ffp/include -I/ffp/include/python2.7 -c src/ip_filter.cpp -o build/temp.linux-armv5tel-2.7/src/ip_filter.o -DTORRENT_USE_OPENSSL -DBOOST_ASIO_HASH_MAP_BUCKETS=1021 -DBOOST_EXCEPTION_DISABLE -DBOOST_ASIO_ENABLE_CANCELIO -DBOOST_ASIO_DYN_LINK -DTORRENT_LINKING_SHARED
+creating build/lib.linux-armv5tel-2.7
+g++ -pthread -shared -L/ffp/lib -L/ffp/lib -L/ffp/lib -lpthread -march=armv5te -O3 -fvisibility=hidden -I/ffp/include -I/ffp/include build/temp.linux-armv5tel-2.7/src/datetime.o build/temp.linux-armv5tel-2.7/src/torrent_info.o build/temp.linux-armv5tel-2.7/src/session_settings.o build/temp.linux-armv5tel-2.7/src/error_code.o build/temp.linux-armv5tel-2.7/src/big_number.o build/temp.linux-armv5tel-2.7/src/module.o build/temp.linux-armv5tel-2.7/src/alert.o build/temp.linux-armv5tel-2.7/src/torrent_status.o build/temp.linux-armv5tel-2.7/src/fingerprint.o build/temp.linux-armv5tel-2.7/src/torrent_handle.o build/temp.linux-armv5tel-2.7/src/version.o build/temp.linux-armv5tel-2.7/src/session.o build/temp.linux-armv5tel-2.7/src/utility.o build/temp.linux-armv5tel-2.7/src/converters.o build/temp.linux-armv5tel-2.7/src/entry.o build/temp.linux-armv5tel-2.7/src/torrent.o build/temp.linux-armv5tel-2.7/src/string.o build/temp.linux-armv5tel-2.7/src/magnet_uri.o build/temp.linux-armv5tel-2.7/src/create_torrent.o build/temp.linux-armv5tel-2.7/src/peer_info.o build/temp.linux-armv5tel-2.7/src/ip_filter.o -L../../src/.libs -L/ffp/lib -L/ffp/lib -L/ffp/lib -ltorrent-rasterbar -liconv -lGeoIP -lpthread -lboost_system -lboost_python -lpthread -lssl -lcrypto -ldl -lpython2.7 -o build/lib.linux-armv5tel-2.7/libtorrent.so -L/ffp/lib -L/ffp/lib
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings/python'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+Making all in tools
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/tools'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/tools'
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647'
+make[1]: Nothing to be done for `all-am'.
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647'
+Making install in include/libtorrent
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/include/libtorrent'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/include/libtorrent'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/include/libtorrent" || /ffp/bin/mkdir -p "/mnt/HD_a2/build/ffp/include/libtorrent"
+ /ffp/bin/install -c -m 644  address.hpp add_torrent_params.hpp alert.hpp alert_types.hpp alloca.hpp allocator.hpp assert.hpp bandwidth_limit.hpp bandwidth_manager.hpp bandwidth_socket.hpp bandwidth_queue_entry.hpp bencode.hpp bitfield.hpp bloom_filter.hpp broadcast_socket.hpp bt_peer_connection.hpp buffer.hpp build_config.hpp chained_buffer.hpp config.hpp connection_queue.hpp ConvertUTF.h copy_ptr.hpp create_torrent.hpp deadline_timer.hpp debug.hpp disk_buffer_holder.hpp disk_buffer_pool.hpp disk_io_thread.hpp entry.hpp enum_net.hpp error.hpp error_code.hpp escape_string.hpp extensions.hpp file.hpp file_pool.hpp file_storage.hpp fingerprint.hpp gzip.hpp '/mnt/HD_a2/build/ffp/include/libtorrent/.'
+ /ffp/bin/install -c -m 644  hasher.hpp http_connection.hpp http_parser.hpp http_seed_connection.hpp http_stream.hpp http_tracker_connection.hpp i2p_stream.hpp identify_client.hpp instantiate_connection.hpp intrusive_ptr_base.hpp invariant_check.hpp io.hpp io_service.hpp io_service_fwd.hpp ip_filter.hpp lazy_entry.hpp lsd.hpp magnet_uri.hpp max.hpp natpmp.hpp packet_buffer.hpp parse_url.hpp pch.hpp pe_crypto.hpp peer_connection.hpp peer.hpp peer_id.hpp peer_info.hpp peer_request.hpp piece_block_progress.hpp piece_picker.hpp policy.hpp proxy_base.hpp ptime.hpp puff.hpp random.hpp rsa.hpp rss.hpp session.hpp session_settings.hpp '/mnt/HD_a2/build/ffp/include/libtorrent/.'
+/ffp/bin/mkdir -p '/mnt/HD_a2/build/ffp/include/libtorrent/kademlia'
+ /ffp/bin/install -c -m 644  kademlia/dht_tracker.hpp kademlia/find_data.hpp kademlia/logging.hpp kademlia/msg.hpp kademlia/node.hpp kademlia/node_entry.hpp kademlia/node_id.hpp kademlia/observer.hpp kademlia/refresh.hpp kademlia/routing_table.hpp kademlia/rpc_manager.hpp kademlia/traversal_algorithm.hpp '/mnt/HD_a2/build/ffp/include/libtorrent/kademlia'
+ /ffp/bin/install -c -m 644  session_status.hpp settings.hpp size_type.hpp sliding_average.hpp socket.hpp socket_io.hpp socket_type.hpp socket_type_fwd.hpp socks5_stream.hpp ssl_stream.hpp stat.hpp storage.hpp storage_defs.hpp string_util.hpp struct_debug.hpp thread.hpp time.hpp timestamp_history.hpp torrent_handle.hpp torrent.hpp torrent_info.hpp tracker_manager.hpp udp_socket.hpp udp_tracker_connection.hpp union_endpoint.hpp upnp.hpp utp_socket_manager.hpp utp_stream.hpp utf8.hpp version.hpp web_connection_base.hpp web_peer_connection.hpp xml_parse.hpp tommath.h tommath_class.h tommath_superclass.h '/mnt/HD_a2/build/ffp/include/libtorrent/.'
+/ffp/bin/mkdir -p '/mnt/HD_a2/build/ffp/include/libtorrent/aux_'
+ /ffp/bin/install -c -m 644  aux_/session_impl.hpp '/mnt/HD_a2/build/ffp/include/libtorrent/aux_'
+/ffp/bin/mkdir -p '/mnt/HD_a2/build/ffp/include/libtorrent/extensions'
+ /ffp/bin/install -c -m 644  extensions/logger.hpp extensions/lt_trackers.hpp extensions/metadata_transfer.hpp extensions/smart_ban.hpp extensions/ut_metadata.hpp extensions/ut_pex.hpp '/mnt/HD_a2/build/ffp/include/libtorrent/extensions'
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/include/libtorrent'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/include/libtorrent'
+Making install in src
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/src'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/src'
+test -z "/ffp/lib" || /ffp/bin/mkdir -p "/mnt/HD_a2/build/ffp/lib"
+ /ffp/bin/sh ../libtool   --mode=install /ffp/bin/install -c   libtorrent-rasterbar.la '/mnt/HD_a2/build/ffp/lib'
+libtool: install: /ffp/bin/install -c .libs/libtorrent-rasterbar.so.7.0.0 /mnt/HD_a2/build/ffp/lib/libtorrent-rasterbar.so.7.0.0
+libtool: install: (cd /mnt/HD_a2/build/ffp/lib && { ln -s -f libtorrent-rasterbar.so.7.0.0 libtorrent-rasterbar.so.7 || { rm -f libtorrent-rasterbar.so.7 && ln -s libtorrent-rasterbar.so.7.0.0 libtorrent-rasterbar.so.7; }; })
+libtool: install: (cd /mnt/HD_a2/build/ffp/lib && { ln -s -f libtorrent-rasterbar.so.7.0.0 libtorrent-rasterbar.so || { rm -f libtorrent-rasterbar.so && ln -s libtorrent-rasterbar.so.7.0.0 libtorrent-rasterbar.so; }; })
+libtool: install: /ffp/bin/install -c .libs/libtorrent-rasterbar.lai /mnt/HD_a2/build/ffp/lib/libtorrent-rasterbar.la
+libtool: install: warning: remember to run `libtool --finish /ffp/lib'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/src'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/src'
+Making install in examples
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/examples'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/examples'
+test -z "/ffp/bin" || /ffp/bin/mkdir -p "/mnt/HD_a2/build/ffp/bin"
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/examples'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/examples'
+Making install in test
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/test'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/test'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/test'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/test'
+Making install in bindings
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+Making install in python
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings/python'
+/ffp/bin/python setup.py build
+running build
+running build_ext
+make[3]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings/python'
+/ffp/bin/python setup.py install --root=/mnt/HD_a2/build
+running install
+running build
+running build_ext
+running install_lib
+creating /mnt/HD_a2/build/ffp/lib/python2.7
+creating /mnt/HD_a2/build/ffp/lib/python2.7/site-packages
+copying build/lib.linux-armv5tel-2.7/libtorrent.so -> /mnt/HD_a2/build/ffp/lib/python2.7/site-packages
+running install_egg_info
+Writing /mnt/HD_a2/build/ffp/lib/python2.7/site-packages/python_libtorrent-0.16.10-py2.7.egg-info
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings/python'
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings/python'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+make[3]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/bindings'
+Making install in tools
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/tools'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/tools'
+test -z "/ffp/bin" || /ffp/bin/mkdir -p "/mnt/HD_a2/build/ffp/bin"
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/tools'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647/tools'
+make[1]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647'
+make[2]: Entering directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/ffp/lib/pkgconfig" || /ffp/bin/mkdir -p "/mnt/HD_a2/build/ffp/lib/pkgconfig"
+ /ffp/bin/install -c -m 644 libtorrent-rasterbar.pc '/mnt/HD_a2/build/ffp/lib/pkgconfig'
+make[2]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647'
+make[1]: Leaving directory `/i-data/7cf371c4/build/libtorrent-0.16.10-svn8647'
+Creating /tmp/libtorrent-0.16.10-svn8647-arm-0.txz ...

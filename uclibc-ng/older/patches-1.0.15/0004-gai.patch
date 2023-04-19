@@ -1,0 +1,29 @@
+--- a/libc/inet/getaddrinfo.c	2016-05-29 10:19:36.000000000 +0300
++++ b/libc/inet/getaddrinfo.c	2016-06-17 11:29:47.000000000 +0300
+@@ -803,7 +803,7 @@
+ 
+ /*
+  * A call to getaddrinfo might return multiple answers. To provide
+- * possibility to change the sorting we must use /etc/gai.conf file,
++ * possibility to change the sorting we must use /ffp/etc/gai.conf file,
+  * like glibc.
+  *
+  * gai.conf format:
+@@ -828,7 +828,7 @@
+  */
+ static void __gai_conf_parse(void)
+ {
+-	/* NO reread of /etc/gai.conf on change. */
++	/* NO reread of /ffp/etc/gai.conf on change. */
+ 	if (__gai_precedence != 0)
+ 		return;
+ 
+@@ -837,7 +837,7 @@
+ 	parser_t *parser;
+ 	char **tok = NULL;
+ 
+-	parser = config_open("/etc/gai.conf");
++	parser = config_open("/ffp/etc/gai.conf");
+ 	if (!parser)
+ 		return;
+ 

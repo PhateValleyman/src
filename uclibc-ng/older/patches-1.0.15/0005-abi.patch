@@ -1,0 +1,40 @@
+diff -rupN a/Rules.mak b/Rules.mak
+--- a/Rules.mak	2016-05-29 10:19:35.000000000 +0300
++++ b/Rules.mak	2016-06-17 11:49:32.000000000 +0300
+@@ -129,7 +129,7 @@ MINOR_VERSION := 0
+ SUBLEVEL      := 15
+ EXTRAVERSION  :=
+ VERSION       := $(MAJOR_VERSION).$(MINOR_VERSION).$(SUBLEVEL)
+-ABI_VERSION   := $(MAJOR_VERSION)
++ABI_VERSION   := 0
+ ifneq ($(EXTRAVERSION),)
+ VERSION       := $(VERSION)$(EXTRAVERSION)
+ endif
+@@ -557,9 +557,9 @@ endif
+ ifeq ($(UCLIBC_HAS_ARGP),y)
+ ifeq ($(HARDWIRED_ABSPATH),y)
+ # Only used in installed libc.so linker script
+-UARGP_FULL_NAME := $(subst //,/,$(RUNTIME_PREFIX)$(MULTILIB_DIR)/libuargp.so.$(MAJOR_VERSION))
++UARGP_FULL_NAME := $(subst //,/,$(RUNTIME_PREFIX)$(MULTILIB_DIR)/libuargp.so.$(ABI_VERSION))
+ else
+-UARGP_FULL_NAME := libuargp.so.$(MAJOR_VERSION)
++UARGP_FULL_NAME := libuargp.so.$(ABI_VERSION)
+ endif
+ export UARGP_ASNEEDED:=$(shell $(CC) -Wl,--help 2>/dev/null | grep -q -- --as-needed && \
+ 	echo "GROUP ( AS_NEEDED ( $(UARGP_FULL_NAME) ) )" || \
+diff -rupN a/libuargp/Makefile.in b/libuargp/Makefile.in
+--- a/libuargp/Makefile.in	2016-05-29 10:19:37.000000000 +0300
++++ b/libuargp/Makefile.in	2016-06-17 11:51:19.000000000 +0300
+@@ -50,10 +50,10 @@ $(top_builddir)lib/libuargp.so: $(top_bu
+ else
+ $(top_builddir)lib/libuargp.so: $(libuargp_OUT)/libuargp_so.a $(libc.depend)
+ endif
+-	$(call link.so,$(libuargp_FULL_NAME),$(MAJOR_VERSION))
++	$(call link.so,$(libuargp_FULL_NAME),$(ABI_VERSION))
+ else
+ $(top_builddir)lib/libuargp.so: $(libuargp_OUT)/libuargp.oS $(libc.depend)
+-	$(call linkm.so,$(libuargp_FULL_NAME),$(MAJOR_VERSION))
++	$(call linkm.so,$(libuargp_FULL_NAME),$(ABI_VERSION))
+ endif
+ 
+ $(libuargp_OUT)/libuargp_so.a: $(libuargp-so-y)

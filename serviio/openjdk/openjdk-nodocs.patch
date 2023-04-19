@@ -1,0 +1,15 @@
+--- make/Main.gmk	2015-02-04 22:14:35.000000000 +0200
++++ /mnt/HD_a2/buildfirst/openjdk-8.40.25/make/Main.gmk	2015-04-15 22:24:44.755544190 +0300
+@@ -159,12 +159,6 @@
+ 	@($(CD) $(JDK_TOPDIR)/make && $(BUILD_LOG_WRAPPER) $(MAKE) $(MAKE_ARGS) -f BuildJdk.gmk install)
+ 	@$(call TargetExit)
+ 
+-docs: jdk docs-only
+-docs-only: start-make
+-	@$(call TargetEnter)
+-	@($(CD) $(SRC_ROOT)/make && $(BUILD_LOG_WRAPPER) $(MAKE) $(MAKE_ARGS) -f Javadoc.gmk docs)
+-	@$(call TargetExit)
+-
+ sign-jars: jdk sign-jars-only
+ sign-jars-only: start-make
+ 	@$(call TargetEnter)
